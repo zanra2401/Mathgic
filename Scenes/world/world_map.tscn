@@ -1,4 +1,4 @@
-[gd_scene load_steps=180 format=3 uid="uid://chqa3uhkno2h4"]
+[gd_scene load_steps=178 format=3 uid="uid://chqa3uhkno2h4"]
 
 [ext_resource type="Script" path="res://Scenes/world/world_map.gd" id="1_ppf82"]
 [ext_resource type="Texture2D" uid="uid://bqdbn76nwg521" path="res://assets/world_map/1 Tiles/Map_tiles.png" id="1_qiymr"]
@@ -76,13 +76,12 @@
 [ext_resource type="Texture2D" uid="uid://duj8mj6004m10" path="res://assets/operators/card.png" id="74_yl4en"]
 [ext_resource type="Script" path="res://Scenes/world/skill_book.gd" id="75_ljc8u"]
 [ext_resource type="PackedScene" uid="uid://dc7o8kirf2ypa" path="res://Scenes/ui/game_end.tscn" id="75_u4ewb"]
-[ext_resource type="Script" path="res://Scenes/world/Menu.gd" id="77_w7m1x"]
+[ext_resource type="PackedScene" uid="uid://cc1d5dk6sgnhf" path="res://Scenes/menu.tscn" id="77_8mb3o"]
 [ext_resource type="Texture2D" uid="uid://dqsxetwddy51e" path="res://assets/UI2/card.png" id="78_86h5x"]
 [ext_resource type="Script" path="res://Scenes/world/upgrade.gd" id="78_bkvly"]
 [ext_resource type="Texture2D" uid="uid://dy30gsg0ho1ig" path="res://assets/UI2/cards_stack_high.png" id="78_ovp5j"]
 [ext_resource type="Texture2D" uid="uid://cuvnu73efr21e" path="res://assets/UI2/suit_hearts.png" id="79_pdxkp"]
 [ext_resource type="Texture2D" uid="uid://xi26n7lt3xvw" path="res://assets/UI2/cards_stack.png" id="80_l54di"]
-[ext_resource type="StyleBox" uid="uid://nmvwoiurjlmq" path="res://save/button_orange.tres" id="81_51272"]
 [ext_resource type="Texture2D" uid="uid://cxn2aobmtngbp" path="res://assets/UI2/card_add.png" id="81_e0j7r"]
 [ext_resource type="Texture2D" uid="uid://bov3qgpkljr8k" path="res://assets/UI2/sword.png" id="82_84aua"]
 [ext_resource type="Texture2D" uid="uid://de6pgdv8vnf7s" path="res://assets/UI2/shield.png" id="83_wuj16"]
@@ -1371,17 +1370,15 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aygrr"]
-content_margin_left = 40.0
-content_margin_right = 40.0
-bg_color = Color(0.125911, 0.125911, 0.125911, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3kh3"]
 bg_color = Color(0, 0, 0, 0.768627)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1i6dw"]
+bg_color = Color(0.130395, 0.41407, 9.62615e-08, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -1393,17 +1390,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvjf4"]
-content_margin_left = 8.0
-content_margin_top = 8.0
-content_margin_right = 8.0
-content_margin_bottom = 8.0
-bg_color = Color(0.728472, 0.580679, 0.0977385, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rt4n8"]
 bg_color = Color(0.0117647, 0.0431373, 0.113725, 1)
@@ -1550,7 +1536,6 @@ shape = SubResource("CircleShape2D_338cl")
 
 [node name="Transisi" type="CanvasLayer" parent="."]
 layer = 11
-visible = false
 
 [node name="Transisi" parent="Transisi" instance=ExtResource("75_u4ewb")]
 
@@ -2056,35 +2041,7 @@ text = "Halman Selanjutnya"
 stream = ExtResource("73_l6key")
 volume_db = -15.0
 
-[node name="Menu" type="CanvasLayer" parent="."]
-layer = 10
-visible = false
-script = ExtResource("77_w7m1x")
-
-[node name="PanelContainer" type="PanelContainer" parent="Menu"]
-offset_right = 547.0
-offset_bottom = 965.0
-
-[node name="CenterContainer" type="CenterContainer" parent="Menu/PanelContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/CenterContainer"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Button" type="Button" parent="Menu/PanelContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("61_kj0bo")
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_aygrr")
-text = "Resume"
-
-[node name="Button2" type="Button" parent="Menu/PanelContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("61_kj0bo")
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_aygrr")
-text = "Main Menu"
+[node name="Menu" parent="." instance=ExtResource("77_8mb3o")]
 
 [node name="upgrade" type="CanvasLayer" parent="."]
 layer = 10
@@ -2177,7 +2134,7 @@ size_flags_horizontal = 3
 
 [node name="tambah_hp" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("81_51272")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1i6dw")
 icon = ExtResource("81_e0j7r")
 
 [node name="attack" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -2224,7 +2181,7 @@ size_flags_horizontal = 3
 
 [node name="tambah_attack" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("81_51272")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1i6dw")
 icon = ExtResource("81_e0j7r")
 
 [node name="deffense" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -2271,7 +2228,7 @@ size_flags_horizontal = 3
 
 [node name="tambah_defense" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("81_51272")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1i6dw")
 icon = ExtResource("81_e0j7r")
 
 [node name="inti" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -2318,14 +2275,14 @@ size_flags_horizontal = 3
 
 [node name="Button" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("81_51272")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1i6dw")
 icon = ExtResource("81_e0j7r")
 
 [node name="Simpan" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("61_kj0bo")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = ExtResource("81_51272")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1i6dw")
 text = "SIMPAN"
 
 [node name="Batal" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -2336,7 +2293,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_j1js5")
 text = "BATAL"
 
 [node name="MenuWorld" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("87_bvkyi")
 
 [node name="menu" type="HBoxContainer" parent="MenuWorld"]
@@ -2359,25 +2315,11 @@ icon = ExtResource("78_ovp5j")
 layout_mode = 2
 icon = ExtResource("88_cskl6")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 1.0
-offset_top = 26.0
-offset_right = 537.0
-offset_bottom = 84.0
-alignment = 1
-
-[node name="Button" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("61_kj0bo")
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_yvjf4")
-text = "NEXT"
-
 [node name="perpisahan" type="CanvasLayer" parent="."]
 script = ExtResource("90_u5nng")
 
 [node name="PanelContainer" type="PanelContainer" parent="perpisahan"]
-offset_right = 538.0
+offset_right = 544.0
 offset_bottom = 194.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rt4n8")
 
@@ -2433,7 +2375,6 @@ script = ExtResource("92_c46pf")
 [connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book10" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book10" method="_on_pressed"]
 [connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book11" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book11" method="_on_pressed"]
 [connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book12" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book12" method="_on_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/CenterContainer/VBoxContainer/Button" to="Menu" method="_on_button_pressed"]
 [connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp/tambah_hp" to="upgrade" method="_on_tambah_hp_pressed"]
 [connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack/tambah_attack" to="upgrade" method="_on_tambah_attack_pressed"]
 [connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense/tambah_defense" to="upgrade" method="_on_tambah_defense_pressed"]

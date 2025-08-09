@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="save_data" load_steps=2 format=3 uid="uid://htkgg5dp52v4"]
-
-[ext_resource type="Script" path="res://save_data.gd" id="1_wbpwq"]
-
-[resource]
-script = ExtResource("1_wbpwq")

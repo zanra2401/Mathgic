@@ -71,4 +71,10 @@ func transition_done(anim):
 		started = true
 		prolog.set_story(stories[state])
 	else:
+		BattleState.done_prolog()
+		BattleState.event_pertama.prolog = false
 		get_tree().change_scene_to_file("res://Scenes/world/world_map.tscn")
+
+
+func _on_bgm_finished():
+	$bgm.play()

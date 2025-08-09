@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://cvhb6lbvi5yyy"]
+[gd_scene load_steps=13 format=3 uid="uid://cvhb6lbvi5yyy"]
 
 [ext_resource type="Script" path="res://Scenes/combat.gd" id="1_trk2u"]
 [ext_resource type="Script" path="res://Scenes/Enemys.gd" id="2_njafm"]
 [ext_resource type="AudioStream" uid="uid://e6ess7pfjv55" path="res://assets/sound/06 - Victory!.ogg" id="2_qblj3"]
 [ext_resource type="Texture2D" uid="uid://bviuxihkwnxw3" path="res://assets/bg/parallax/parallax_demon_woods_pack/layers/parallax-demon-woods-far-trees.png" id="3_1v2bm"]
-[ext_resource type="Texture2D" uid="uid://dfnbe4iaax24p" path="res://assets/enemy/Gemini_Generated_Image_ep9aw8ep9aw8ep9a.png" id="3_dyq4h"]
 [ext_resource type="Script" path="res://Scenes/BG.gd" id="4_0ckuo"]
 [ext_resource type="Texture2D" uid="uid://ddqe56y5m61ah" path="res://assets/bg/parallax/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="4_p764x"]
 [ext_resource type="Texture2D" uid="uid://btxyy4oj3pb58" path="res://assets/bg/parallax/parallax_demon_woods_pack/layers/parallax-demon-woods-mid-trees.png" id="5_2xgoe"]
-[ext_resource type="PackedScene" uid="uid://ckea0y8wv245d" path="res://Scenes/enemy/iron_knight.tscn" id="5_fh64b"]
 [ext_resource type="Texture2D" uid="uid://dfo1r3fa1lx7a" path="res://assets/bg/parallax/parallax_demon_woods_pack/layers/parallax-demon-woods-close-trees.png" id="6_eubyb"]
 [ext_resource type="PackedScene" uid="uid://hr15ybf6erjh" path="res://Scenes/card_battle.tscn" id="8_4m4ba"]
 [ext_resource type="PackedScene" uid="uid://dc7o8kirf2ypa" path="res://Scenes/ui/game_end.tscn" id="8_pt0vs"]
 [ext_resource type="AudioStream" uid="uid://byolhf2yqpn5u" path="res://assets/sound/enemy.wav" id="9_x0esy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l8s61"]
+load_path = "res://.godot/imported/Gemini_Generated_Image_ep9aw8ep9aw8ep9a.png-52c597ede0c3e5241b337184096c4265.ctex"
 
 [node name="Combat" type="Node2D"]
 script = ExtResource("1_trk2u")
@@ -45,7 +46,7 @@ offset_top = -19.0
 offset_right = 2697.0
 offset_bottom = 2731.0
 scale = Vector2(0.26, 0.26)
-texture = ExtResource("3_dyq4h")
+texture = SubResource("CompressedTexture2D_l8s61")
 stretch_mode = 4
 script = ExtResource("4_0ckuo")
 
@@ -58,9 +59,6 @@ scale = Vector2(0.8, 0.8)
 theme_override_constants/separation = 70
 alignment = 1
 script = ExtResource("2_njafm")
-
-[node name="iron_knight2" parent="Enemys" instance=ExtResource("5_fh64b")]
-layout_mode = 2
 
 [node name="CardBattle" parent="." instance=ExtResource("8_4m4ba")]
 offset_left = -4.0

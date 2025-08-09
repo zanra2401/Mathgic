@@ -30,4 +30,12 @@ extends Resource
 	"defense": 8
 }
 
+@export var event_pertama: Dictionary = {
+	"dialog": true,
+	"prolog": true,
+	"battle": true,
+	"run": true,
+	"memories": true 
+}
+
 @export var level_done: Array = []

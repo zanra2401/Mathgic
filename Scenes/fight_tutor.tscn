@@ -1,11 +1,211 @@
-[gd_scene load_steps=2 format=3 uid="uid://cax1ch8rvvgtc"]
+[gd_scene load_steps=7 format=3 uid="uid://cax1ch8rvvgtc"]
 
-[ext_resource type="VideoStream" path="res://assets/video/tutor (online-video-cutter.com).ogv" id="1_qd5tm"]
+[ext_resource type="Texture2D" uid="uid://cqal7q3j6v45o" path="res://assets/video/Screenshot 2025-08-09 130705.png" id="1_158aw"]
+[ext_resource type="Script" path="res://Scenes/fight_tutor.gd" id="1_g40q6"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="3_sydp0"]
+[ext_resource type="Texture2D" uid="uid://dc31b5kkvb24m" path="res://assets/operators/add_card.png" id="4_p6b7o"]
+[ext_resource type="PackedScene" uid="uid://dc7o8kirf2ypa" path="res://Scenes/ui/game_end.tscn" id="5_vps60"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfdxt"]
+bg_color = Color(0.6, 0.6, 0.6, 0.188235)
 
 [node name="fight_tutor" type="Node2D"]
+script = ExtResource("1_g40q6")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = -6.0
 offset_right = 540.0
-offset_bottom = 974.0
-stream = ExtResource("1_qd5tm")
-autoplay = true
+offset_bottom = 955.0
+texture = ExtResource("1_158aw")
+
+[node name="top" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -1115.0
+offset_right = 522.0
+offset_bottom = -46.0
+color = Color(0.00503549, 0.0745539, 0.134761, 1)
+
+[node name="right" type="ColorRect" parent="."]
+offset_left = 607.0
+offset_top = -10.0
+offset_right = 1141.0
+offset_bottom = 993.0
+color = Color(0.00503549, 0.0745539, 0.134761, 1)
+
+[node name="left" type="ColorRect" parent="."]
+offset_left = -587.0
+offset_top = -5.0
+offset_right = -53.0
+offset_bottom = 978.0
+color = Color(0.00503549, 0.0745539, 0.134761, 1)
+
+[node name="bottom" type="ColorRect" parent="."]
+offset_left = 4.0
+offset_top = 1051.0
+offset_right = 538.0
+offset_bottom = 2034.0
+color = Color(0.00503549, 0.0745539, 0.134761, 1)
+
+[node name="top_tex" type="Label" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+offset_left = 35.0
+offset_top = 20.0
+offset_right = 509.0
+offset_bottom = 302.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="bot_tex" type="Label" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+offset_left = 49.0
+offset_top = 499.0
+offset_right = 482.0
+offset_bottom = 675.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="left2" type="ColorRect" parent="CanvasLayer"]
+offset_left = -3.0
+offset_top = -11.0
+offset_right = 554.0
+offset_bottom = 972.0
+color = Color(0.00503549, 0.0745539, 0.134761, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+offset_left = 11.0
+offset_top = -76.0
+offset_right = 544.0
+offset_bottom = 887.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_p6b7o")
+
+[node name="angka" type="Label" parent="CanvasLayer/CenterContainer/HBoxContainer/TextureRect"]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+layout_mode = 2
+offset_left = -103.0
+offset_top = 111.0
+offset_right = 297.0
+offset_bottom = 169.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 48
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_p6b7o")
+
+[node name="angka" type="Label" parent="CanvasLayer/CenterContainer/HBoxContainer/TextureRect2"]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+layout_mode = 2
+offset_left = -103.0
+offset_top = 111.0
+offset_right = 297.0
+offset_bottom = 169.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 48
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="angka2" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+offset_left = 66.0
+offset_top = 45.0
+offset_right = 466.0
+offset_bottom = 272.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 24
+text = "tanda di atas kiri adalah operator tanda ini dapat berupa penjumlahan, pengurangan, perkalian dan pembagian"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="angka3" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+offset_left = 78.0
+offset_top = 563.0
+offset_right = 478.0
+offset_bottom = 853.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 24
+text = "tanda di kiri bawah adalah tanda untuk menandakan angka negatif atau positif, kamu bisa menggabungkan kartu itu dan akan menghasilkan kartu positif 13 dengan operator +"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="angka4" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+offset_top = 8.0
+offset_right = 538.0
+offset_bottom = 62.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 24
+text = "TTORIAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="next" type="Button" parent="CanvasLayer2"]
+offset_left = 414.0
+offset_top = 854.0
+offset_right = 520.0
+offset_bottom = 939.0
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_tfdxt")
+text = "NEXT"
+
+[node name="back" type="Button" parent="CanvasLayer2"]
+offset_left = 13.0
+offset_top = 854.0
+offset_right = 119.0
+offset_bottom = 939.0
+theme_override_fonts/font = ExtResource("3_sydp0")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_tfdxt")
+text = "BACK"
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="Transisi" parent="CanvasLayer3" instance=ExtResource("5_vps60")]
+
+[connection signal="pressed" from="CanvasLayer2/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="CanvasLayer2/back" to="." method="_on_back_pressed"]

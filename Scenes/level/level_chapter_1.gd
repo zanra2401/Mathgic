@@ -4,7 +4,7 @@ var destination: float = -100
 var level: int = 1
 var stage: int = 0
 var event: String = ""
-@export var total_stage: int = 20
+@export var total_stage: int = 13
 var done: bool = false
 
 @onready var transisi: Node2D = $Transisi_Layer/Transisi
@@ -60,11 +60,17 @@ func sampai():
 			$Player/music.stop()
 			$Transisi_Layer/Transisi.transition_close_world()
 		elif event == "run":
+			if BattleState.event_pertama.run:
+				$tutor_run.show()
+				return
 			$Player/idle.hide()
 			$Player/run.hide()
 			stop_music()
 			$Player.play_cutscene("kaget_lari")
 		elif event == "memories_puzzle":
+			if BattleState.event_pertama.memories:
+				$tutor_memori.show()
+				return
 			$Player/idle.hide()
 			$Player/run.hide()
 			$Player.play_cutscene("penasaran")
@@ -90,6 +96,9 @@ func _on_music_finished():
 	$Player/music.play()
 
 func proses_battle():
+	if BattleState.event_pertama.battle:
+		get_tree().change_scene_to_file("res://Scenes/fight_tutor.tscn")
+		return
 	get_tree().change_scene_to_file("res://Scenes/combat.tscn")
 
 
@@ -131,3 +140,26 @@ func _on_di_kejar_finished():
 func puzzle_memories_done():
 	$CanvasLayer.show()
 	$CanvasLayer/HBoxContainer/next.activate()
+
+
+func _on_button_pressed():
+	BattleState.done_memories()
+	BattleState.event_pertama.memories = false
+	$tutor_memori.hide()
+	$Player/idle.hide()
+	$Player/run.hide()
+	$Player.play_cutscene("penasaran")
+
+
+func _on_close_run_pressed():
+	BattleState.done_run()
+	BattleState.event_pertama.run = false
+	$tutor_run.hide()
+	$Player/idle.hide()
+	$Player/run.hide()
+	stop_music()
+	$Player.play_cutscene("kaget_lari")
+
+
+func _on_open_setting_pressed():
+	$Menu.show()

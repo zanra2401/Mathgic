@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc1d5dk6sgnhf"]
+
+[ext_resource type="Script" path="res://Scenes/world/Menu.gd" id="1_up3tw"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="2_x1k21"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aygrr"]
+content_margin_left = 40.0
+content_margin_right = 40.0
+bg_color = Color(0.125911, 0.125911, 0.125911, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Menu" type="CanvasLayer"]
+layer = 10
+visible = false
+script = ExtResource("1_up3tw")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 547.0
+offset_bottom = 965.0
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x1k21")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_aygrr")
+text = "Resume"
+
+[node name="Button3" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x1k21")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_aygrr")
+text = "Peta Dunia"
+
+[node name="Button2" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x1k21")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_aygrr")
+text = "Main Menu"
+
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dbhf7hts1s1s6"]
+[gd_scene load_steps=21 format=3 uid="uid://dbhf7hts1s1s6"]
 
 [ext_resource type="Script" path="res://Scenes/iron_knight.gd" id="1_eu6e1"]
 [ext_resource type="Script" path="res://Scenes/enemy/hp_enemy.gd" id="2_na5d8"]
@@ -68,6 +68,22 @@ tracks/0/keys = {
 "values": [3, 4, 5, 6, 7]
 }
 
+[sub_resource type="Animation" id="Animation_2y1uf"]
+resource_name = "dead"
+length = 0.22
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [51, 52, 53]
+}
+
 [sub_resource type="Animation" id="Animation_c4p5f"]
 resource_name = "idle"
 length = 0.6
@@ -86,11 +102,29 @@ tracks/0/keys = {
 "values": [0, 1, 2]
 }
 
+[sub_resource type="Animation" id="Animation_p2m1p"]
+resource_name = "take_damage"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [27, 28, 29]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tghok"]
 _data = {
 "RESET": SubResource("Animation_5a03p"),
 "attack": SubResource("Animation_0x81a"),
-"idle": SubResource("Animation_c4p5f")
+"dead": SubResource("Animation_2y1uf"),
+"idle": SubResource("Animation_c4p5f"),
+"take_damage": SubResource("Animation_p2m1p")
 }
 
 [sub_resource type="Animation" id="Animation_cmjk8"]
@@ -140,6 +174,7 @@ offset_top = 88.0
 offset_right = 504.0
 offset_bottom = 450.0
 script = ExtResource("1_eu6e1")
+health = 20
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(194, 114)

@@ -5,6 +5,20 @@ var draging: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var enemy: int = randi() % 3 + 1
+	match  enemy:
+		1: 
+			var slime = load("res://Scenes/enemy/slime.tscn")
+			BattleState.enemies.add_child(slime.instantiate())
+			BattleState.enemies.add_child(slime.instantiate())
+		2:
+			var leaflen = load("res://Scenes/enemy/leaflen.tscn")
+			BattleState.enemies.add_child(leaflen.instantiate())
+			BattleState.enemies.add_child(leaflen.instantiate())
+		3:
+			var carnivore = load("res://Scenes/enemy/carnivore_pant.tscn").instantiate()
+			BattleState.enemies.add_child(carnivore)
+			
 	BattleState.battleState = BattleState.BattleState.MY_TURN
 	BattleState.combat = self
 	$Transisi.transition_open_world()

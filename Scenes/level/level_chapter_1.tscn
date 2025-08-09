@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://ccsvevv6taqh3"]
+[gd_scene load_steps=65 format=3 uid="uid://ccsvevv6taqh3"]
 
 [ext_resource type="Script" path="res://Scenes/level/level_chapter_1.gd" id="1_qpeb6"]
 [ext_resource type="Texture2D" uid="uid://ddqe56y5m61ah" path="res://assets/bg/parallax/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="2_32hwj"]
@@ -38,12 +38,16 @@
 [ext_resource type="Texture2D" uid="uid://moc3v2meug23" path="res://assets/progress_bar/timer_100.png" id="25_m1ut8"]
 [ext_resource type="Texture2D" uid="uid://7c4hd1wo5lmd" path="res://assets/operators/card_back.png" id="26_ybuul"]
 [ext_resource type="Script" path="res://Scenes/level/time.gd" id="28_b2wqt"]
+[ext_resource type="Texture2D" uid="uid://bk4jntqa044gg" path="res://assets/UI2/hexagon_outline.png" id="31_8sxdo"]
 [ext_resource type="Texture2D" uid="uid://dqsxetwddy51e" path="res://assets/UI2/card.png" id="39_o786s"]
 [ext_resource type="Script" path="res://Scenes/level/memories.gd" id="39_rcshj"]
 [ext_resource type="Script" path="res://Scenes/level/memories_card.gd" id="40_v028d"]
 [ext_resource type="Script" path="res://Scenes/level/number_card_memories.gd" id="41_g4cem"]
 [ext_resource type="Texture2D" uid="uid://dc31b5kkvb24m" path="res://assets/operators/add_card.png" id="41_lq3kj"]
 [ext_resource type="AudioStream" uid="uid://e6ess7pfjv55" path="res://assets/sound/06 - Victory!.ogg" id="44_38bmc"]
+[ext_resource type="Texture2D" uid="uid://b583aejahme5i" path="res://assets/video/memori.png" id="45_dkdkl"]
+[ext_resource type="Texture2D" uid="uid://c1ajego3co8v4" path="res://assets/video/Screenshot 2025-08-09 145148.png" id="46_ahy8a"]
+[ext_resource type="PackedScene" uid="uid://cc1d5dk6sgnhf" path="res://Scenes/menu.tscn" id="47_dygs6"]
 
 [sub_resource type="Animation" id="Animation_wrui6"]
 length = 0.001
@@ -368,6 +372,12 @@ bg_color = Color(0.64304, 0.485387, 0.262823, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jmubb"]
 bg_color = Color(0.864045, 0.277675, 0.243184, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tn4do"]
+bg_color = Color(0.0599134, 0.00157491, 0.173428, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5opj"]
+bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
 [node name="level_chapter_1" type="Node2D"]
 script = ExtResource("1_qpeb6")
 
@@ -385,7 +395,8 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-position = Vector2(-33.5, 192.5)
+position = Vector2(-18.8088, 199.25)
+scale = Vector2(1.04963, 1.04963)
 texture = ExtResource("2_eooyv")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -413,11 +424,12 @@ motion_mirroring = Vector2(592, 0)
 texture = ExtResource("4_1pigt")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(122.5, 134)
+position = Vector2(123.5, 137)
 motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(592, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(3.5, -2)
 texture = ExtResource("5_vra6r")
 
 [node name="Player" type="Node2D" parent="."]
@@ -602,6 +614,13 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("18_mfemc")
 theme_override_font_sizes/font_size = 24
 text = "0"
+
+[node name="open_setting" type="Button" parent="CanvasLayer"]
+offset_left = 454.0
+offset_top = 44.0
+offset_right = 526.0
+offset_bottom = 116.0
+icon = ExtResource("31_8sxdo")
 
 [node name="run" type="CanvasLayer" parent="."]
 visible = false
@@ -1131,11 +1150,88 @@ vertical_alignment = 1
 stream = ExtResource("44_38bmc")
 volume_db = -15.0
 
+[node name="tutor_memori" type="CanvasLayer" parent="."]
+layer = 5
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="tutor_memori"]
+offset_right = 547.0
+offset_bottom = 960.0
+texture = ExtResource("45_dkdkl")
+
+[node name="Label" type="Label" parent="tutor_memori"]
+offset_left = 10.0
+offset_top = 705.0
+offset_right = 532.0
+offset_bottom = 867.0
+theme_override_fonts/font = ExtResource("18_mfemc")
+theme_override_font_sizes/font_size = 24
+text = "Kamu harus membuka 2 kartu yang jika di gabung menghasilkan angka di kartu yang terbuka, jika salah reward kartu pengalaman akan berkurang"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="tutor_memori"]
+offset_left = 317.0
+offset_top = -35.0
+offset_right = 544.0
+offset_bottom = 226.0
+theme_override_fonts/font = ExtResource("18_mfemc")
+theme_override_font_sizes/font_size = 24
+text = "ini adalah reward kartu pengalaman di gunakan untuk upgrade status"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="tutor_memori"]
+offset_left = 190.0
+offset_top = 876.0
+offset_right = 378.0
+offset_bottom = 930.0
+theme_override_fonts/font = ExtResource("18_mfemc")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_tn4do")
+text = "OK"
+
+[node name="tutor_run" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="tutor_run"]
+offset_right = 546.0
+offset_bottom = 959.0
+texture = ExtResource("46_ahy8a")
+
+[node name="Label3" type="Label" parent="tutor_run"]
+offset_left = 6.0
+offset_top = 317.0
+offset_right = 528.0
+offset_bottom = 532.0
+theme_override_fonts/font = ExtResource("18_mfemc")
+theme_override_font_sizes/font_size = 24
+text = "Kamu Harus memilih hasil dari operasi di atas dengan waktu terbatas jika salah atau waktu habis nyawa akan berkurang total nyawa 3, setiap benar  meregenerasi nyawa "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="close_run" type="Button" parent="tutor_run"]
+offset_left = 211.0
+offset_top = 557.0
+offset_right = 336.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("18_mfemc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5opj")
+text = "OK"
+
+[node name="Menu" parent="." instance=ExtResource("47_dygs6")]
+
 [connection signal="finished" from="di_kejar" to="." method="_on_di_kejar_finished"]
 [connection signal="animation_finished" from="Player/cutscene/AnimationPlayer" to="Player/cutscene" method="_on_animation_player_animation_finished"]
 [connection signal="finished" from="Player/music" to="." method="_on_music_finished"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/next" to="CanvasLayer/HBoxContainer/next" method="_on_pressed"]
 [connection signal="animation_finished" from="CanvasLayer/HBoxContainer/next/card_anim" to="CanvasLayer/HBoxContainer/next" method="_on_card_anim_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/open_setting" to="." method="_on_open_setting_pressed"]
 [connection signal="pressed" from="run/run_card/TextureButton" to="run/run_card/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="run/run_card/TextureButton2" to="run/run_card/TextureButton2" method="_on_pressed"]
 [connection signal="pressed" from="run/run_card/TextureButton3" to="run/run_card/TextureButton3" method="_on_pressed"]
@@ -1157,3 +1253,5 @@ volume_db = -15.0
 [connection signal="pressed" from="memories/GridContainer/TextureButton12" to="memories/GridContainer/TextureButton12" method="_on_pressed"]
 [connection signal="pressed" from="memories/TextureButton" to="memories/TextureButton" method="_on_pressed"]
 [connection signal="timeout" from="memories/Timer" to="memories" method="_on_timer_timeout"]
+[connection signal="pressed" from="tutor_memori/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="tutor_run/close_run" to="." method="_on_close_run_pressed"]

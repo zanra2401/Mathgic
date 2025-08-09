@@ -29,6 +29,9 @@ func _ready():
 		return
 		
 	avatar.texture = load("res://Scenes/avatar (1).png")
+	$"../MenuWorld".hide()
+	$"../level2".hide()
+	$"../level".hide()
 	nama.text = "Kakek"
 	dialog.set_story(dialog_kakek[index_kakek])
 	index_kakek += 1
@@ -41,7 +44,11 @@ func _unhandled_input(event):
 		else:
 			if aksa:
 				if index_aksa >= len(dialog_aksa):
+					BattleState.done_dialog()
 					BattleState.event_pertama.dialog = false
+					$"../MenuWorld".show()
+					$"../level2".show()
+					$"../level".show()
 					self.hide()
 					return
 					

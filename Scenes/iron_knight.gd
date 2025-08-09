@@ -8,9 +8,9 @@ const ID: String = "enemy"
 @onready var damage_number: RichTextLabel = $damage
 @onready var enemy_sprite: Sprite2D = $enemy
 
-@export var health: int = 20
-@export var max_damage: int = 9
-@export var defense: int = 2
+@export var health: int = 15
+@export var max_damage: int = 7
+@export var defense: int = 1
 var number_damage: int = 20
 var mouse_inside: bool = false
 var turn: int = 0
@@ -37,13 +37,16 @@ func take_damage(attack, number, damage):
 		$attack_spot.add_child(attack_instan)
 		animation_player.play("attacked")
 		$enemy.modulate = Color(0.6, 0.3, 0.3)
+		$enemy/AnimationPlayer.play("take_damage")
+		print("test")
 		if damage - defense <= 0:
 			health -= 1
 		else:
 			health -= (damage - defense)
 		
 		if health < 1:
-			queue_free()
+			health = 0
+			$enemy/AnimationPlayer.play("dead")
 		
 		set_health()
 
@@ -89,6 +92,10 @@ func _on_animation_player_animation_finished(anim_name):
 		animation_player.play("idle")
 	elif anim_name == "attack":
 		animation_player.play("idle")
+	elif anim_name == "take_damage":
+		animation_player.play("idle")
+	elif anim_name == "dead":
+		queue_free()
 
 func _on_timer_timeout():
 	if wait_state == "wait_attack":

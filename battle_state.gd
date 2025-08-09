@@ -45,13 +45,7 @@ var combat: Node2D = null
 var drag_type = null
 
 
-var event_pertama: Dictionary = {
-	"dialog": false,
-	"prolog": false,
-	"tutor_fight": true,
-	"tutor_run": true,
-	"tutor_meories": true 
-}
+var event_pertama: Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -71,8 +65,6 @@ func _ready():
 		"last_position": save_data.locationData.last_position
 	}
 	
-	print(level_stage.level)
-	
 	upgrade = {
 		"max_hp": save_data.upgrade.max_hp,
 		"max_inti": save_data.upgrade.max_inti,
@@ -85,6 +77,14 @@ func _ready():
 		"max_inti": save_data.last_upgrade.max_inti,
 		"base_damage": save_data.last_upgrade.base_damage,
 		"defense": save_data.last_upgrade.defense
+	}
+	
+	event_pertama = {
+		"dialog": save_data.event_pertama.dialog,
+		"prolog": save_data.event_pertama.prolog,
+		"battle": save_data.event_pertama.battle,
+		"run": save_data.event_pertama.run,
+		"memories": save_data.event_pertama.memories 
 	}
 	
 	total_pengalaman = save_data.pengalaman
@@ -131,6 +131,7 @@ func is_enemy_dead():
 		combat.victory_sound()
 		combat = null
 		return true
+		
 	return false
 	
 func is_palyer_dead():
@@ -151,8 +152,8 @@ const levels: Dictionary = {
 	},
 	
 	1: {
-		"uniq_event": [1],
-		1: "run",
+		"uniq_event": [3],
+		3: "run",
 		"pos": 199
 	}
 }
@@ -175,7 +176,26 @@ func save_updarade():
 	save_data.last_upgrade = last_upgrade
 	save_data.upgrade = upgrade
 
-	
+func done_run():
+	save_data.event_pertama.run = false
+	save_game()
+
+func done_prolog():
+	save_data.event_pertama.prolog = false
+	save_game()
+
+func done_memories():
+	save_data.event_pertama.memories = false
+	save_game()
+
+func done_battle():
+	save_data.event_pertama.battle = false
+	save_game()
+
+func done_dialog():
+	save_data.event_pertama.dialog = false
+	save_game()
+
 func win_level():
 	total_pengalaman += pengalaman_colected
 	save_pengalaman()

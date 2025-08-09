@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Gemastik_Prototype"
+config/name="MathGic"
 run/main_scene="res://Scenes/ui/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 

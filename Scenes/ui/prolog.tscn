@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://n4f8wx77sebm"]
+[gd_scene load_steps=20 format=3 uid="uid://n4f8wx77sebm"]
 
 [ext_resource type="Script" path="res://Scenes/ui/prolog.gd" id="1_6knol"]
 [ext_resource type="Texture2D" uid="uid://nlqudjxnlqk1" path="res://assets/operators/defeat_card.png" id="1_wkga3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b7ne3uo7y5jb8" path="res://assets/operators/mul_card.png" id="9_aoy6b"]
 [ext_resource type="Texture2D" uid="uid://buqhrcsqxafcs" path="res://assets/operators/div_card.png" id="10_31pdu"]
 [ext_resource type="PackedScene" uid="uid://dc7o8kirf2ypa" path="res://Scenes/ui/game_end.tscn" id="11_0xrli"]
+[ext_resource type="AudioStream" uid="uid://chn8mnkxycyax" path="res://assets/sound/04 - Silent Forest.mp3" id="12_4it6w"]
 
 [sub_resource type="Animation" id="Animation_uovwj"]
 length = 0.001
@@ -310,5 +311,11 @@ libraries = {
 
 [node name="Transisi" parent="CanvasLayer" instance=ExtResource("11_0xrli")]
 
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_4it6w")
+volume_db = -15.0
+autoplay = true
+
 [connection signal="timeout" from="Story/MarginContainer/PanelContainer/prolog_label/Timer" to="Story/MarginContainer/PanelContainer/prolog_label" method="_on_timer_timeout"]
 [connection signal="animation_finished" from="card2" to="." method="_on_card_2_animation_finished"]
+[connection signal="finished" from="bgm" to="." method="_on_bgm_finished"]
