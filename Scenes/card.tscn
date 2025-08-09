@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://b2y7ixefcnigr"]
+
+[ext_resource type="Script" path="res://scripts/Card.gd" id="2_hjywt"]
+[ext_resource type="Texture2D" uid="uid://yhovf6hklcwq" path="res://assets/operators/animation/add_card.png" id="3_g16fm"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="3_w0ccb"]
+[ext_resource type="AudioStream" uid="uid://cf46oljplnbkl" path="res://assets/sound/card-sounds-35956.mp3" id="12_txy34"]
+[ext_resource type="AudioStream" uid="uid://tbx31kykl65v" path="res://assets/sound/draw_card.mp3" id="13_a4ilh"]
+
+[sub_resource type="Animation" id="Animation_o1ne0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_g16fm")]
+}
+
+[sub_resource type="Animation" id="Animation_vad1y"]
+resource_name = "opening"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4nns"]
+_data = {
+"RESET": SubResource("Animation_o1ne0"),
+"opening": SubResource("Animation_vad1y")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cisk"]
+size = Vector2(193.237, 280.193)
+
+[node name="Card" type="TextureButton"]
+custom_minimum_size = Vector2(195, 280)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("2_hjywt")
+
+[node name="number" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("3_w0ccb")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+
+[node name="AnimationCard" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q4nns")
+}
+
+[node name="animation" type="Sprite2D" parent="."]
+position = Vector2(95, 141)
+texture = ExtResource("3_g16fm")
+hframes = 9
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+
+[node name="card" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card"]
+position = Vector2(96.6183, 140.097)
+shape = SubResource("RectangleShape2D_2cisk")
+
+[node name="card_opening" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_txy34")
+volume_db = -2.675
+pitch_scale = 1.01
+attenuation = 1.8025
+
+[node name="draw_card" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_a4ilh")
+volume_db = 15.0
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="card" to="." method="_on_card_area_entered"]
+[connection signal="area_exited" from="card" to="." method="_on_card_area_exited"]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfge1d0j4aue5"]
+
+[ext_resource type="Texture2D" uid="uid://c3nguos6h2d3i" path="res://assets/operators/add.png" id="1_usivd"]
+[ext_resource type="Script" path="res://Card.gd" id="2_rvs7m"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="3_s75ed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nl2y"]
+size = Vector2(390, 560)
+
+[node name="Card" type="Sprite2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_usivd")
+centered = false
+script = ExtResource("2_rvs7m")
+value = "8"
+type = "mul"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(195, 280)
+shape = SubResource("RectangleShape2D_6nl2y")
+
+[node name="number" type="Label" parent="."]
+offset_left = 16.6667
+offset_top = 193.333
+offset_right = 366.667
+offset_bottom = 338.333
+theme_override_fonts/font = ExtResource("3_s75ed")
+theme_override_font_sizes/font_size = 120
+text = "1000"
+horizontal_alignment = 1

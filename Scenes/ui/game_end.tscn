@@ -1,0 +1,218 @@
+[gd_scene load_steps=19 format=3 uid="uid://dc7o8kirf2ypa"]
+
+[ext_resource type="Script" path="res://Scenes/ui/game_end.gd" id="1_qgpkn"]
+[ext_resource type="Texture2D" uid="uid://7c4hd1wo5lmd" path="res://assets/operators/card_back.png" id="2_i8e2y"]
+[ext_resource type="Script" path="res://Scenes/ui/simbol.gd" id="3_7rhpk"]
+[ext_resource type="Texture2D" uid="uid://c7oqke815ynma" path="res://assets/operators/animation/skill_card.png" id="3_dihkw"]
+[ext_resource type="AudioStream" uid="uid://cf46oljplnbkl" path="res://assets/sound/card-sounds-35956.mp3" id="5_foxis"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="6_kq5i3"]
+[ext_resource type="Script" path="res://Scenes/ui/OK_Battle_Button.gd" id="7_3fryi"]
+[ext_resource type="Texture2D" uid="uid://dqsxetwddy51e" path="res://assets/UI2/card.png" id="7_4xebe"]
+[ext_resource type="Script" path="res://Scenes/ui/reward.gd" id="7_msd2f"]
+[ext_resource type="AudioStream" uid="uid://4gudw85j3ril" path="res://assets/sound/18 - Never Give Up.mp3" id="10_lcewn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qym1"]
+bg_color = Color(0, 0, 0.0941176, 1)
+
+[sub_resource type="Animation" id="Animation_2uor2"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_i6j65"]
+resource_name = "end"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-16, -520), Vector2(-24, -16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 968), Vector2(-24, 488)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("simbol:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(184, -400), Vector2(192, 376)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx7v0"]
+_data = {
+"RESET": SubResource("Animation_2uor2"),
+"end": SubResource("Animation_i6j65")
+}
+
+[sub_resource type="Animation" id="Animation_8x7ok"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_3n6ws"]
+resource_name = "flip"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_333yx"]
+_data = {
+"RESET": SubResource("Animation_8x7ok"),
+"flip": SubResource("Animation_3n6ws")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_punyy"]
+bg_color = Color(0.611485, 0.612221, 0.462081, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Transisi" type="Node2D"]
+z_index = 10
+script = ExtResource("1_qgpkn")
+
+[node name="top" type="Panel" parent="."]
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 568.0
+offset_bottom = 496.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6qym1")
+
+[node name="bottom" type="Panel" parent="."]
+offset_left = -24.0
+offset_top = 488.0
+offset_right = 568.0
+offset_bottom = 1000.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6qym1")
+
+[node name="end_animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx7v0")
+}
+
+[node name="simbol" type="TextureRect" parent="."]
+offset_left = 192.0
+offset_top = 376.0
+offset_right = 387.0
+offset_bottom = 656.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_i8e2y")
+script = ExtResource("3_7rhpk")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="simbol"]
+visible = false
+position = Vector2(100, 140)
+texture = ExtResource("3_dihkw")
+hframes = 9
+frame = 1
+
+[node name="simbol_animation" type="AnimationPlayer" parent="simbol"]
+libraries = {
+"": SubResource("AnimationLibrary_333yx")
+}
+
+[node name="opening" type="AudioStreamPlayer2D" parent="simbol"]
+stream = ExtResource("5_foxis")
+
+[node name="ket" type="Label" parent="simbol"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 208.75
+offset_right = 179.0
+offset_bottom = 269.75
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("6_kq5i3")
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="end_battle" type="Node2D" parent="."]
+visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="end_battle"]
+offset_left = 3.0
+offset_top = 699.0
+offset_right = 545.0
+offset_bottom = 757.0
+alignment = 1
+
+[node name="OK_Battle_Button" type="Button" parent="end_battle/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_kq5i3")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_punyy")
+text = "OK"
+script = ExtResource("7_3fryi")
+
+[node name="reward" type="HBoxContainer" parent="end_battle"]
+offset_left = -1.0
+offset_top = 290.0
+offset_right = 540.0
+offset_bottom = 354.0
+alignment = 1
+script = ExtResource("7_msd2f")
+
+[node name="card" type="TextureRect" parent="end_battle/reward"]
+layout_mode = 2
+texture = ExtResource("7_4xebe")
+
+[node name="Label" type="Label" parent="end_battle/reward"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_kq5i3")
+theme_override_font_sizes/font_size = 28
+text = "100"
+
+[node name="defeat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_lcewn")
+volume_db = -7.0
+
+[connection signal="animation_finished" from="end_animation" to="." method="_on_end_animation_animation_finished"]
+[connection signal="animation_finished" from="end_animation" to="end_battle/HBoxContainer/OK_Battle_Button" method="_on_end_animation_animation_finished"]
+[connection signal="animation_finished" from="simbol/simbol_animation" to="simbol" method="_on_simbol_animation_animation_finished"]
+[connection signal="animation_finished" from="simbol/simbol_animation" to="end_battle/HBoxContainer/OK_Battle_Button" method="_on_simbol_animation_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="end_battle/HBoxContainer/OK_Battle_Button" to="end_battle/HBoxContainer/OK_Battle_Button" method="_on_pressed"]

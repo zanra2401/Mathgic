@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://des7raomo7dpl"]
+
+[ext_resource type="Texture2D" uid="uid://crceqtdlyffh3" path="res://assets/vfx/Smoke/FX001/FX001_01.png" id="1_xtwy3"]
+[ext_resource type="Script" path="res://puch.gd" id="2_05kqw"]
+[ext_resource type="Texture2D" uid="uid://3paoc6x0hbfs" path="res://assets/vfx/Smoke/FX001/FX001_02.png" id="3_tmb5b"]
+[ext_resource type="Texture2D" uid="uid://xshd8ot4d3fl" path="res://assets/vfx/Smoke/FX001/FX001_03.png" id="4_6w2er"]
+[ext_resource type="Texture2D" uid="uid://dx2rruyva53pl" path="res://assets/vfx/Smoke/FX001/FX001_04.png" id="5_24x0y"]
+[ext_resource type="Texture2D" uid="uid://ophe20gk4eqw" path="res://assets/vfx/Smoke/FX001/FX001_05.png" id="6_c6sls"]
+
+[sub_resource type="Animation" id="Animation_a1vh2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_xtwy3")]
+}
+
+[sub_resource type="Animation" id="Animation_554u7"]
+resource_name = "puch"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_xtwy3"), ExtResource("3_tmb5b"), ExtResource("4_6w2er"), ExtResource("5_24x0y"), ExtResource("6_c6sls")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6iht"]
+_data = {
+"RESET": SubResource("Animation_a1vh2"),
+"puch": SubResource("Animation_554u7")
+}
+
+[node name="puch" type="Sprite2D"]
+texture = ExtResource("1_xtwy3")
+script = ExtResource("2_05kqw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n6iht")
+}
+
+[node name="destroy" type="Timer" parent="."]
+
+[node name="puchSound" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="timeout" from="destroy" to="." method="_on_destroy_timeout"]

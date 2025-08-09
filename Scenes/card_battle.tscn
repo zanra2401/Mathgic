@@ -1,0 +1,156 @@
+[gd_scene load_steps=14 format=3 uid="uid://hr15ybf6erjh"]
+
+[ext_resource type="Texture2D" uid="uid://b4kikmohkbtx2" path="res://assets/UI2/Tiles/Large tiles/Thick outline/tile_0028.png" id="1_12nkc"]
+[ext_resource type="PackedScene" uid="uid://ch4oepfxn7hr1" path="res://Scenes/ui/inti_container.tscn" id="1_lxbq1"]
+[ext_resource type="StyleBox" uid="uid://bov2somywa74w" path="res://resource/panel.tres" id="1_tjh84"]
+[ext_resource type="Script" path="res://Test/Eval.gd" id="2_dhxii"]
+[ext_resource type="Script" path="res://Test/Deck.gd" id="2_utsmh"]
+[ext_resource type="Script" path="res://Test/Eval_Area.gd" id="3_8pfpt"]
+[ext_resource type="PackedScene" uid="uid://b2y7ixefcnigr" path="res://Scenes/card.tscn" id="3_dv8cs"]
+[ext_resource type="PackedScene" uid="uid://bxjy7owvcaiv7" path="res://Scenes/ui/hp.tscn" id="3_rp33j"]
+[ext_resource type="Script" path="res://Test/DeckGrid.gd" id="3_ydyfs"]
+[ext_resource type="PackedScene" uid="uid://cqgrx6uy6i3dc" path="res://Scenes/end_turn.tscn" id="5_10u7d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1tht"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jpttc"]
+texture = ExtResource("1_12nkc")
+modulate_color = Color(0.219608, 0.494118, 0.188235, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48bxo"]
+size = Vector2(126.282, 162.938)
+
+[node name="CardBattle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 495.0
+offset_right = 1176.0
+offset_bottom = 1503.0
+scale = Vector2(0.477, 0.477)
+theme_override_constants/separation = 20
+
+[node name="inti_container" parent="VBoxContainer" instance=ExtResource("1_lxbq1")]
+layout_mode = 2
+
+[node name="ControlPanel" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 320)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d1tht")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ControlPanel"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="hp" type="PanelContainer" parent="VBoxContainer/ControlPanel/HBoxContainer"]
+custom_minimum_size = Vector2(235, 320)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jpttc")
+
+[node name="hp" type="MarginContainer" parent="VBoxContainer/ControlPanel/HBoxContainer/hp"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="hp" parent="VBoxContainer/ControlPanel/HBoxContainer/hp/hp" instance=ExtResource("3_rp33j")]
+layout_mode = 2
+
+[node name="Spell" type="PanelContainer" parent="VBoxContainer/ControlPanel/HBoxContainer"]
+custom_minimum_size = Vector2(235, 320)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jpttc")
+
+[node name="Eval" type="MarginContainer" parent="VBoxContainer/ControlPanel/HBoxContainer/Spell"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("2_dhxii")
+ID = "Spell_Area"
+
+[node name="Eval" type="Area2D" parent="VBoxContainer/ControlPanel/HBoxContainer/Spell/Eval"]
+script = ExtResource("3_8pfpt")
+ID = "Spell_Area"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/ControlPanel/HBoxContainer/Spell/Eval/Eval"]
+position = Vector2(103.094, 153.04)
+shape = SubResource("RectangleShape2D_48bxo")
+
+[node name="Card" parent="VBoxContainer/ControlPanel/HBoxContainer/Spell/Eval" instance=ExtResource("3_dv8cs")]
+layout_mode = 2
+
+[node name="Attack" type="PanelContainer" parent="VBoxContainer/ControlPanel/HBoxContainer"]
+custom_minimum_size = Vector2(235, 320)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jpttc")
+
+[node name="Eval" type="MarginContainer" parent="VBoxContainer/ControlPanel/HBoxContainer/Attack"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("2_dhxii")
+ID = "Attack_Area"
+
+[node name="Eval" type="Area2D" parent="VBoxContainer/ControlPanel/HBoxContainer/Attack/Eval"]
+script = ExtResource("3_8pfpt")
+ID = "Attack_Area"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/ControlPanel/HBoxContainer/Attack/Eval/Eval"]
+position = Vector2(129.981, 170.104)
+shape = SubResource("RectangleShape2D_48bxo")
+
+[node name="Card" parent="VBoxContainer/ControlPanel/HBoxContainer/Attack/Eval" instance=ExtResource("3_dv8cs")]
+layout_mode = 2
+
+[node name="End_Turn" type="PanelContainer" parent="VBoxContainer/ControlPanel/HBoxContainer"]
+custom_minimum_size = Vector2(235, 320)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jpttc")
+
+[node name="End" type="MarginContainer" parent="VBoxContainer/ControlPanel/HBoxContainer/End_Turn"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="End_Turn" parent="VBoxContainer/ControlPanel/HBoxContainer/End_Turn/End" instance=ExtResource("5_10u7d")]
+layout_mode = 2
+
+[node name="Deck" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_tjh84")
+script = ExtResource("2_utsmh")
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Deck"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="DeckGrid" type="GridContainer" parent="VBoxContainer/Deck/MarginContainer"]
+custom_minimum_size = Vector2(1055, 580)
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 5
+script = ExtResource("3_ydyfs")
+
+[connection signal="area_entered" from="VBoxContainer/ControlPanel/HBoxContainer/Spell/Eval/Eval" to="VBoxContainer/ControlPanel/HBoxContainer/Spell/Eval/Eval" method="_on_area_entered"]
+[connection signal="area_exited" from="VBoxContainer/ControlPanel/HBoxContainer/Spell/Eval/Eval" to="VBoxContainer/ControlPanel/HBoxContainer/Spell/Eval/Eval" method="_on_area_exited"]
+[connection signal="area_entered" from="VBoxContainer/ControlPanel/HBoxContainer/Attack/Eval/Eval" to="VBoxContainer/ControlPanel/HBoxContainer/Attack/Eval/Eval" method="_on_area_entered"]
+[connection signal="area_exited" from="VBoxContainer/ControlPanel/HBoxContainer/Attack/Eval/Eval" to="VBoxContainer/ControlPanel/HBoxContainer/Attack/Eval/Eval" method="_on_area_exited"]

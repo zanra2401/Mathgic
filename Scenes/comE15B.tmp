@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvhb6lbvi5yyy"]
+
+[ext_resource type="Script" path="res://Scenes/Deck.gd" id="1_olt2k"]
+[ext_resource type="Script" path="res://Scenes/combat.gd" id="1_trk2u"]
+[ext_resource type="Script" path="res://Scenes/eval.gd" id="3_7n747"]
+[ext_resource type="Texture2D" uid="uid://7o52h7jiknot" path="res://assets/enemy/Clockwork Slime.png" id="4_rmolq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrhsh"]
+size = Vector2(99.25, 133.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2lcp"]
+size = Vector2(176, 456)
+
+[node name="Combat" type="Node2D"]
+script = ExtResource("1_trk2u")
+
+[node name="Deck" type="Node2D" parent="."]
+position = Vector2(0, 656)
+script = ExtResource("1_olt2k")
+
+[node name="eval" type="Node2D" parent="."]
+position = Vector2(208, 464)
+script = ExtResource("3_7n747")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="eval"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="eval/Area2D"]
+position = Vector2(49.375, 67.125)
+shape = SubResource("RectangleShape2D_rrhsh")
+
+[node name="Enemys" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Enemys"]
+offset_right = 536.0
+offset_bottom = 456.0
+
+[node name="slot" type="Node2D" parent="Enemys"]
+position = Vector2(176, 0)
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Enemys/slot"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/slot/Area2D"]
+position = Vector2(92, 228)
+shape = SubResource("RectangleShape2D_w2lcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/slot"]
+position = Vector2(112, 160)
+texture = ExtResource("4_rmolq")
+
+[node name="slot2" type="Node2D" parent="Enemys"]
+
+[node name="Area2D" type="Area2D" parent="Enemys/slot2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/slot2/Area2D"]
+position = Vector2(88, 228)
+shape = SubResource("RectangleShape2D_w2lcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/slot2"]
+position = Vector2(104, 240)
+texture = ExtResource("4_rmolq")
+
+[node name="slot3" type="Node2D" parent="Enemys"]
+position = Vector2(360, 0)
+
+[node name="Area2D" type="Area2D" parent="Enemys/slot3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/slot3/Area2D"]
+position = Vector2(88, 228)
+shape = SubResource("RectangleShape2D_w2lcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/slot3"]
+position = Vector2(112, 240)
+texture = ExtResource("4_rmolq")
+
+[connection signal="mouse_entered" from="eval/Area2D" to="eval" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="eval/Area2D" to="eval" method="_on_area_2d_mouse_exited"]

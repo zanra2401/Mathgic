@@ -1,0 +1,229 @@
+[gd_scene load_steps=19 format=3 uid="uid://dbhf7hts1s1s6"]
+
+[ext_resource type="Script" path="res://Scenes/iron_knight.gd" id="1_eu6e1"]
+[ext_resource type="Script" path="res://Scenes/enemy/hp_enemy.gd" id="2_na5d8"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="3_ppjft"]
+[ext_resource type="Texture2D" uid="uid://bne0uvbrji6iu" path="res://assets/operators/animation/hearth_card.png" id="4_tpaxb"]
+[ext_resource type="AudioStream" uid="uid://cf46oljplnbkl" path="res://assets/sound/card-sounds-35956.mp3" id="5_rxesa"]
+[ext_resource type="Texture2D" uid="uid://bpx5lrn2ubd0s" path="res://assets/enemy/Leafen.png" id="6_tpylb"]
+[ext_resource type="PackedScene" uid="uid://ri5wqg4tvvue" path="res://Scenes/ui/damage_card.tscn" id="7_wivlu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2lcp"]
+size = Vector2(216, 452.556)
+
+[sub_resource type="Animation" id="Animation_dvq3v"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_gua40"]
+resource_name = "idle"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vj8ed"]
+_data = {
+"RESET": SubResource("Animation_dvq3v"),
+"idle": SubResource("Animation_gua40")
+}
+
+[sub_resource type="Animation" id="Animation_5a03p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_0x81a"]
+resource_name = "attacl"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_c4p5f"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 2
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tghok"]
+_data = {
+"RESET": SubResource("Animation_5a03p"),
+"attack": SubResource("Animation_0x81a"),
+"idle": SubResource("Animation_c4p5f")
+}
+
+[sub_resource type="Animation" id="Animation_cmjk8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("damage_card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 128)]
+}
+
+[sub_resource type="Animation" id="Animation_es1ph"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("damage_card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(32, 64), Vector2(48, 48), Vector2(32, 64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfmil"]
+_data = {
+"RESET": SubResource("Animation_cmjk8"),
+"idle": SubResource("Animation_es1ph")
+}
+
+[node name="leaflen" type="Control"]
+custom_minimum_size = Vector2(216, 362)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 288.0
+offset_top = 88.0
+offset_right = 504.0
+offset_bottom = 450.0
+script = ExtResource("1_eu6e1")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(194, 114)
+scale = Vector2(1, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-82, 77.5)
+shape = SubResource("RectangleShape2D_w2lcp")
+
+[node name="hp_enemy" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.037
+anchor_bottom = 0.994
+offset_left = 48.0
+offset_top = 248.0
+offset_right = 19.008
+offset_bottom = 168.172
+scale = Vector2(0.477, 0.477)
+script = ExtResource("2_na5d8")
+
+[node name="hp" type="Label" parent="hp_enemy"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("3_ppjft")
+theme_override_font_sizes/font_size = 48
+text = "200"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="hp_enemy"]
+position = Vector2(96, 144)
+texture = ExtResource("4_tpaxb")
+hframes = 9
+
+[node name="animation_hp_card" type="AnimationPlayer" parent="hp_enemy"]
+libraries = {
+"": SubResource("AnimationLibrary_vj8ed")
+}
+
+[node name="opening" type="AudioStreamPlayer2D" parent="hp_enemy"]
+stream = ExtResource("5_rxesa")
+
+[node name="Timer" type="Timer" parent="hp_enemy"]
+
+[node name="enemy" type="Sprite2D" parent="."]
+position = Vector2(104, 160)
+texture = ExtResource("6_tpylb")
+hframes = 9
+vframes = 6
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemy"]
+libraries = {
+"": SubResource("AnimationLibrary_tghok")
+}
+autoplay = "idle"
+
+[node name="attack_spot" type="Node2D" parent="."]
+position = Vector2(88, 224)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="damage_card" parent="." instance=ExtResource("7_wivlu")]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 387.012
+offset_bottom = 408.0
+rotation = 0.593062
+scale = Vector2(0.477, 0.477)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wfmil")
+}
+autoplay = "idle"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="animation_finished" from="hp_enemy/animation_hp_card" to="hp_enemy" method="_on_animation_hp_card_animation_finished"]
+[connection signal="timeout" from="hp_enemy/Timer" to="hp_enemy" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="enemy/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

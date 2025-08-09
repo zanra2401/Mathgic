@@ -1,0 +1,547 @@
+[gd_scene load_steps=19 format=3 uid="uid://bsfd47rr1ygfm"]
+
+[ext_resource type="Texture2D" uid="uid://nlqudjxnlqk1" path="res://assets/operators/defeat_card.png" id="1_by5au"]
+[ext_resource type="Script" path="res://Scenes/ui/main.gd" id="1_olgmu"]
+[ext_resource type="Texture2D" uid="uid://br2xb3l3avhnu" path="res://assets/operators/play.png" id="1_tdmxs"]
+[ext_resource type="Texture2D" uid="uid://7c4hd1wo5lmd" path="res://assets/operators/card_back.png" id="2_7qvr6"]
+[ext_resource type="Texture2D" uid="uid://eeguabgxrn20" path="res://assets/operators/attack_card.png" id="2_giwd3"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="2_sy2rb"]
+[ext_resource type="Script" path="res://Scenes/ui/TextureButton.gd" id="3_1xrc3"]
+[ext_resource type="Texture2D" uid="uid://cuiwtnthv5645" path="res://assets/operators/animation/play.png" id="3_aq1ux"]
+[ext_resource type="AudioStream" uid="uid://cf46oljplnbkl" path="res://assets/sound/card-sounds-35956.mp3" id="4_ixnwy"]
+[ext_resource type="Texture2D" uid="uid://doy7fmeyknbqu" path="res://assets/operators/start_level_card.png" id="4_slwtv"]
+
+[sub_resource type="Animation" id="Animation_7bvs7"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_uwenj"]
+resource_name = "flip"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_girf3"]
+_data = {
+"RESET": SubResource("Animation_7bvs7"),
+"flip": SubResource("Animation_uwenj")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3qxj"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.0392157, 0.0392157, 0.0392157, 0.709804)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_uovwj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(23.3333, 93.3333)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("card2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(428.333, 618.333)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-18.3334, 1123.33)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("card4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(623.333, 1430)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("card5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(803.333, 183.333)]
+}
+
+[sub_resource type="Animation" id="Animation_64n1p"]
+resource_name = "animasi"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(8.33334, 121.667), Vector2(23.3333, 93.3333), Vector2(8.33334, 121.667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("card2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(418.333, 600), Vector2(428.333, 618.333), Vector2(418.333, 600)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-45, 1150), Vector2(-18.3334, 1123.33), Vector2(-45, 1150)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("card4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(623.333, 1396.67), Vector2(623.333, 1430), Vector2(623.333, 1396.67)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("card5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(775, 145), Vector2(803.333, 183.333), Vector2(775, 145)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_socjk"]
+_data = {
+"RESET": SubResource("Animation_uovwj"),
+"animasi": SubResource("Animation_64n1p")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3hnc"]
+bg_color = Color(0.133333, 0.054902, 0.133333, 0.941176)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_olgmu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -21.0
+offset_top = -34.0
+offset_right = 559.0
+offset_bottom = 986.0
+color = Color(0.104245, 9.59908e-06, 0.105816, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+offset_right = 680.0
+offset_bottom = 1205.0
+scale = Vector2(0.8, 0.8)
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_tdmxs")
+script = ExtResource("3_1xrc3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/CenterContainer/TextureButton"]
+libraries = {
+"": SubResource("AnimationLibrary_girf3")
+}
+
+[node name="anim" type="Sprite2D" parent="CanvasLayer/CenterContainer/TextureButton"]
+visible = false
+position = Vector2(-12, 2.99998)
+texture = ExtResource("3_aq1ux")
+hframes = 9
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/CenterContainer/TextureButton"]
+stream = ExtResource("4_ixnwy")
+volume_db = -8.0
+
+[node name="credit" type="Button" parent="CanvasLayer"]
+offset_left = 353.0
+offset_top = 19.0
+offset_right = 528.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("2_sy2rb")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_m3qxj")
+text = "CREDIT"
+
+[node name="card" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 980.0
+offset_bottom = 1653.0
+scale = Vector2(0.6, 0.6)
+
+[node name="card" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = 23.3333
+offset_top = 93.3333
+offset_right = 218.333
+offset_bottom = 373.333
+rotation = 0.395311
+texture = ExtResource("1_by5au")
+
+[node name="card2" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = 428.333
+offset_top = 618.333
+offset_right = 623.348
+offset_bottom = 898.333
+rotation = -0.336133
+texture = ExtResource("2_giwd3")
+
+[node name="card3" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = -18.3334
+offset_top = 1123.33
+offset_right = 176.667
+offset_bottom = 1403.33
+rotation = 0.454424
+texture = ExtResource("2_7qvr6")
+
+[node name="card4" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = 623.333
+offset_top = 1430.0
+offset_right = 818.333
+offset_bottom = 1710.0
+rotation = 0.150637
+texture = ExtResource("4_slwtv")
+
+[node name="card5" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = 803.333
+offset_top = 183.333
+offset_right = 998.333
+offset_bottom = 463.333
+rotation = -0.302743
+texture = ExtResource("2_7qvr6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="card"]
+libraries = {
+"": SubResource("AnimationLibrary_socjk")
+}
+autoplay = "animasi"
+
+[node name="credit" type="CanvasLayer" parent="."]
+layer = 5
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="credit"]
+offset_right = 540.0
+offset_bottom = 963.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e3hnc")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="credit/PanelContainer"]
+custom_minimum_size = Vector2(540, 960)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="credit/PanelContainer/ScrollContainer"]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+
+[node name="ui_pack8" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack8"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Librarium By aekashics.itch.io
+
+https://aekashics.itch.io/aekashics-librarium-librarium-static-batch-megapack
+"
+fit_content = true
+
+[node name="ui_pack" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "ui-pack-pixel-adventure BY kenney.nl
+
+https://kenney.nl/assets/ui-pack-pixel-adventure
+
+Licensed under CC0: https://creativecommons.org/publicdomain/zero/1.0/"
+fit_content = true
+
+[node name="ui_pack2" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack2"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "board-game-icons BY kenney.nl
+
+https://kenney.nl/assets/board-game-icons
+
+Licensed under CC0: https://creativecommons.org/publicdomain/zero/1.0/"
+fit_content = true
+
+[node name="ui_pack3" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack3"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "emotes-pack BY kenney.nl
+
+https://kenney.nl/assets/emotes-pack
+
+Licensed under CC0: https://creativecommons.org/publicdomain/zero/1.0/"
+fit_content = true
+
+[node name="ui_pack4" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack4"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Pixel Map By craftpix.net
+
+https://kenney.nl/assets/emotes-pack
+
+Licensed under https://craftpix.net/freebies/free-level-map-pixel-art-assets-pack//"
+fit_content = true
+
+[node name="ui_pack5" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack5"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "SunnySide World Character By danieldiggle.itch.io
+
+https://danieldiggle.itch.io/sunnyside
+"
+fit_content = true
+
+[node name="ui_pack6" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack6"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "16-Bit Fantasy & Adventure Music Pack By xdeviruchi.itch.io
+
+https://danieldiggle.itch.io/sunnyside
+
+Licensed Under https://drive.google.com/file/d/1ieSq1zu4KCOwF4ZvIGAo_egpPrjX3npR/view"
+fit_content = true
+
+[node name="ui_pack7" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack7"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Small Sound Kit By sound-works-12.itch.io
+
+https://sound-works-12.itch.io/small-sound-kit
+"
+fit_content = true
+
+[node name="ui_pack9" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack9"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Fire Spell Effect 02 By pimen.itch.io
+
+https://pimen.itch.io/fire-spell-effect-02"
+fit_content = true
+
+[node name="ui_pack10" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack10"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Smoke N Dust By pimen.itch.io
+
+https://pimen.itch.io/smoke-vfx-1"
+fit_content = true
+
+[node name="ui_pack11" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack11"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Light Card By pixabay.com
+
+https://pixabay.com/sound-effects/light-card-36851/
+
+Licensed Under https://pixabay.com/service/terms/"
+fit_content = true
+
+[node name="ui_pack12" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack12"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Card Sound By pixabay.com
+
+https://pixabay.com/sound-effects/card-sounds-35956/
+
+Licensed Under https://pixabay.com/service/terms/"
+fit_content = true
+
+[node name="ui_pack13" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack13"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Monster Sound By ateliermagicae.itch.io
+
+https://ateliermagicae.itch.io/monster-sound-effects-vol1/"
+fit_content = true
+
+[node name="ui_pack14" type="MarginContainer" parent="credit/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credit/PanelContainer/ScrollContainer/VBoxContainer/ui_pack14"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_sy2rb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Demon Woods Parallax Background By aethrall.itch.io
+
+https://aethrall.itch.io/demon-woods-parallax-background"
+fit_content = true
+
+[node name="close_credit" type="Button" parent="credit"]
+offset_left = 410.0
+offset_top = 10.0
+offset_right = 523.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("2_sy2rb")
+theme_override_font_sizes/font_size = 24
+text = "CLOSE"
+
+[connection signal="pressed" from="CanvasLayer/CenterContainer/TextureButton" to="CanvasLayer/CenterContainer/TextureButton" method="_on_pressed"]
+[connection signal="animation_finished" from="CanvasLayer/CenterContainer/TextureButton/AnimationPlayer" to="CanvasLayer/CenterContainer/TextureButton" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="credit/close_credit" to="." method="_on_close_credit_pressed"]

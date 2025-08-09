@@ -1,0 +1,314 @@
+[gd_scene load_steps=19 format=3 uid="uid://n4f8wx77sebm"]
+
+[ext_resource type="Script" path="res://Scenes/ui/prolog.gd" id="1_6knol"]
+[ext_resource type="Texture2D" uid="uid://nlqudjxnlqk1" path="res://assets/operators/defeat_card.png" id="1_wkga3"]
+[ext_resource type="Texture2D" uid="uid://7c4hd1wo5lmd" path="res://assets/operators/card_back.png" id="2_vru7l"]
+[ext_resource type="Texture2D" uid="uid://doy7fmeyknbqu" path="res://assets/operators/start_level_card.png" id="3_l335u"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="4_urbfn"]
+[ext_resource type="Script" path="res://Scenes/ui/prolog_label.gd" id="5_iv5fm"]
+[ext_resource type="Texture2D" uid="uid://x3or51m7fat0" path="res://assets/operators/addl_card_n.png" id="7_ywadp"]
+[ext_resource type="Texture2D" uid="uid://c11qqmb6jg8xu" path="res://assets/operators/sub_card.png" id="8_uqldv"]
+[ext_resource type="Texture2D" uid="uid://b7ne3uo7y5jb8" path="res://assets/operators/mul_card.png" id="9_aoy6b"]
+[ext_resource type="Texture2D" uid="uid://buqhrcsqxafcs" path="res://assets/operators/div_card.png" id="10_31pdu"]
+[ext_resource type="PackedScene" uid="uid://dc7o8kirf2ypa" path="res://Scenes/ui/game_end.tscn" id="11_0xrli"]
+
+[sub_resource type="Animation" id="Animation_uovwj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(23.3333, 93.3333)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("card2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(428.333, 618.333)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-18.3334, 1123.33)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("card4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(623.333, 1430)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("card5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(803.333, 183.333)]
+}
+
+[sub_resource type="Animation" id="Animation_64n1p"]
+resource_name = "animasi"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(8.33334, 121.667), Vector2(23.3333, 93.3333), Vector2(8.33334, 121.667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("card2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(418.333, 600), Vector2(428.333, 618.333), Vector2(418.333, 600)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-45, 1150), Vector2(-18.3334, 1123.33), Vector2(-45, 1150)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("card4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(623.333, 1396.67), Vector2(623.333, 1430), Vector2(623.333, 1396.67)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("card5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(775, 145), Vector2(803.333, 183.333), Vector2(775, 145)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_socjk"]
+_data = {
+"RESET": SubResource("Animation_uovwj"),
+"animasi": SubResource("Animation_64n1p")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jeof"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_2cleu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lltm0"]
+resource_name = "show_card"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43aog"]
+_data = {
+"RESET": SubResource("Animation_2cleu"),
+"show_card": SubResource("Animation_lltm0")
+}
+
+[node name="prolog" type="Node2D"]
+script = ExtResource("1_6knol")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -21.0
+offset_top = -34.0
+offset_right = 559.0
+offset_bottom = 986.0
+color = Color(0.104245, 9.59908e-06, 0.105816, 1)
+
+[node name="card" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 980.0
+offset_bottom = 1653.0
+scale = Vector2(0.6, 0.6)
+
+[node name="card" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = 23.3333
+offset_top = 93.3333
+offset_right = 218.333
+offset_bottom = 373.333
+rotation = 0.395311
+texture = ExtResource("1_wkga3")
+
+[node name="card3" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = -18.3334
+offset_top = 1123.33
+offset_right = 176.667
+offset_bottom = 1403.33
+rotation = 0.454424
+texture = ExtResource("2_vru7l")
+
+[node name="card4" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = 623.333
+offset_top = 1430.0
+offset_right = 818.333
+offset_bottom = 1710.0
+rotation = 0.150637
+texture = ExtResource("3_l335u")
+
+[node name="card5" type="TextureRect" parent="card"]
+layout_mode = 0
+offset_left = 803.333
+offset_top = 183.333
+offset_right = 998.333
+offset_bottom = 463.333
+rotation = -0.302743
+texture = ExtResource("2_vru7l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="card"]
+libraries = {
+"": SubResource("AnimationLibrary_socjk")
+}
+autoplay = "animasi"
+
+[node name="Story" type="CenterContainer" parent="."]
+offset_right = 540.0
+offset_bottom = 962.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Story"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="Story/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7jeof")
+
+[node name="prolog_label" type="Label" parent="Story/MarginContainer/PanelContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_urbfn")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("5_iv5fm")
+
+[node name="Timer" type="Timer" parent="Story/MarginContainer/PanelContainer/prolog_label"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 770.0
+offset_bottom = 1371.0
+scale = Vector2(0.7, 0.7)
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("7_ywadp")
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("8_uqldv")
+
+[node name="TextureRect3" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("9_aoy6b")
+
+[node name="TextureRect4" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_31pdu")
+
+[node name="card2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_43aog")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transisi" parent="CanvasLayer" instance=ExtResource("11_0xrli")]
+
+[connection signal="timeout" from="Story/MarginContainer/PanelContainer/prolog_label/Timer" to="Story/MarginContainer/PanelContainer/prolog_label" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="card2" to="." method="_on_card_2_animation_finished"]

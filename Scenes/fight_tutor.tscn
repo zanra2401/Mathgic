@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cax1ch8rvvgtc"]
+
+[ext_resource type="VideoStream" path="res://assets/video/tutor (online-video-cutter.com).ogv" id="1_qd5tm"]
+
+[node name="fight_tutor" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 540.0
+offset_bottom = 974.0
+stream = ExtResource("1_qd5tm")
+autoplay = true

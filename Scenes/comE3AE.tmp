@@ -1,0 +1,193 @@
+[gd_scene load_steps=17 format=3 uid="uid://cvhb6lbvi5yyy"]
+
+[ext_resource type="Script" path="res://Scenes/combat.gd" id="1_trk2u"]
+[ext_resource type="Script" path="res://Scenes/Enemys.gd" id="2_njafm"]
+[ext_resource type="Texture2D" uid="uid://bmdvuc5ll3gun" path="res://assets/enemy/Aspiring Knight Gladius.png" id="2_ny5sv"]
+[ext_resource type="Texture2D" uid="uid://dfnbe4iaax24p" path="res://assets/enemy/Gemini_Generated_Image_ep9aw8ep9aw8ep9a.png" id="3_dyq4h"]
+[ext_resource type="Script" path="res://Scenes/BG.gd" id="4_0ckuo"]
+[ext_resource type="Script" path="res://Scenes/iron_knight.gd" id="4_w1d6g"]
+[ext_resource type="Texture2D" uid="uid://dd1jb0hkfl0wk" path="res://assets/progress_bar/player_hp_under.png" id="5_l8dha"]
+[ext_resource type="Texture2D" uid="uid://ca0xkpk5dwgcw" path="res://assets/progress_bar/enemy_hp_progress.png" id="6_v7hp5"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="7_qmk3l"]
+[ext_resource type="PackedScene" uid="uid://hr15ybf6erjh" path="res://Scenes/card_battle.tscn" id="8_4m4ba"]
+[ext_resource type="AudioStream" uid="uid://byolhf2yqpn5u" path="res://assets/sound/enemy.wav" id="9_x0esy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2lcp"]
+size = Vector2(541, 452.556)
+
+[sub_resource type="Animation" id="Animation_qlil1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0.8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.290196, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fklur"]
+resource_name = "attacked"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.290196, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s5gv2"]
+resource_name = "idle"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43gam"]
+_data = {
+"RESET": SubResource("Animation_qlil1"),
+"attacked": SubResource("Animation_fklur"),
+"idle": SubResource("Animation_s5gv2")
+}
+
+[node name="Combat" type="Node2D"]
+script = ExtResource("1_trk2u")
+
+[node name="BG" type="TextureRect" parent="."]
+offset_left = -65.0
+offset_top = -19.0
+offset_right = 2623.0
+offset_bottom = 2558.0
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_dyq4h")
+stretch_mode = 4
+script = ExtResource("4_0ckuo")
+
+[node name="Enemys" type="HBoxContainer" parent="."]
+clip_children = 2
+offset_right = 2048.0
+offset_bottom = 2048.0
+script = ExtResource("2_njafm")
+
+[node name="iron_knight" type="Node2D" parent="Enemys"]
+position = Vector2(1, -51)
+script = ExtResource("4_w1d6g")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Enemys/iron_knight"]
+position = Vector2(196, 135)
+scale = Vector2(1, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/iron_knight/Area2D"]
+position = Vector2(75, 147.5)
+shape = SubResource("RectangleShape2D_w2lcp")
+
+[node name="enemy" type="Sprite2D" parent="Enemys/iron_knight"]
+modulate = Color(1, 0.290196, 0, 1)
+position = Vector2(308, 263)
+scale = Vector2(1, 0.8)
+texture = ExtResource("2_ny5sv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemys/iron_knight/enemy"]
+libraries = {
+"": SubResource("AnimationLibrary_43gam")
+}
+
+[node name="status" type="Control" parent="Enemys/iron_knight"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 268.0
+offset_top = 261.0
+offset_right = 308.0
+offset_bottom = 301.0
+
+[node name="health_bar" type="TextureProgressBar" parent="Enemys/iron_knight/status"]
+layout_mode = 0
+offset_left = -215.0
+offset_top = 79.0
+offset_right = 325.0
+offset_bottom = 99.0
+scale = Vector2(0.8, 1)
+value = 100.0
+texture_under = ExtResource("5_l8dha")
+texture_progress = ExtResource("6_v7hp5")
+
+[node name="health" type="RichTextLabel" parent="Enemys/iron_knight/status"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 37.0
+offset_right = 306.0
+offset_bottom = 76.0
+rotation = 0.75338
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("7_qmk3l")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 20
+text = "60
+"
+
+[node name="damage" type="RichTextLabel" parent="Enemys/iron_knight"]
+offset_left = 24.0
+offset_top = 94.0
+offset_right = 230.0
+offset_bottom = 166.0
+rotation = 0.282563
+theme_override_fonts/normal_font = ExtResource("7_qmk3l")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 20
+text = "60
+"
+
+[node name="attack_spot" type="Node2D" parent="Enemys/iron_knight"]
+position = Vector2(228, 224)
+
+[node name="Timer" type="Timer" parent="Enemys/iron_knight"]
+
+[node name="CardBattle" parent="." instance=ExtResource("8_4m4ba")]
+offset_top = -54.0
+offset_bottom = -14.0
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_x0esy")
+volume_db = -15.285
+autoplay = true
+
+[connection signal="area_entered" from="Enemys/iron_knight/Area2D" to="Enemys/iron_knight" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Enemys/iron_knight/Area2D" to="Enemys/iron_knight" method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="Enemys/iron_knight/Area2D" to="Enemys/iron_knight" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Enemys/iron_knight/Area2D" to="Enemys/iron_knight" method="_on_area_2d_mouse_exited"]
+[connection signal="animation_finished" from="Enemys/iron_knight/enemy/AnimationPlayer" to="Enemys/iron_knight" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Enemys/iron_knight/Timer" to="Enemys/iron_knight" method="_on_timer_timeout"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

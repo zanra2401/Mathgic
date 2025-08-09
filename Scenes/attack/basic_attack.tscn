@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://csmlbs7skv0sg"]
+
+[ext_resource type="Texture2D" uid="uid://bgp81t65m5680" path="res://assets/vfx/basic_attack.png" id="1_auwt3"]
+[ext_resource type="Script" path="res://Scenes/basic_attack.gd" id="2_ucmv6"]
+[ext_resource type="AudioStream" uid="uid://djunjipe8g1w4" path="res://assets/sound/Mgc_Fire_Throw_01.wav" id="3_1lnx4"]
+
+[sub_resource type="Animation" id="Animation_pc0gb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_esytv"]
+resource_name = "attacked"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m6sxx"]
+_data = {
+"RESET": SubResource("Animation_pc0gb"),
+"attacked": SubResource("Animation_esytv")
+}
+
+[node name="basic_attack" type="Sprite2D"]
+position = Vector2(8, 3)
+scale = Vector2(2, 2)
+texture = ExtResource("1_auwt3")
+hframes = 4
+vframes = 4
+script = ExtResource("2_ucmv6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m6sxx")
+}
+
+[node name="destroy" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1lnx4")
+volume_db = 1.0
+autoplay = true
+
+[connection signal="timeout" from="destroy" to="." method="_on_destroy_timeout"]

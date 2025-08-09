@@ -1,0 +1,2446 @@
+[gd_scene load_steps=180 format=3 uid="uid://chqa3uhkno2h4"]
+
+[ext_resource type="Script" path="res://Scenes/world/world_map.gd" id="1_ppf82"]
+[ext_resource type="Texture2D" uid="uid://bqdbn76nwg521" path="res://assets/world_map/1 Tiles/Map_tiles.png" id="1_qiymr"]
+[ext_resource type="Texture2D" uid="uid://fg6vsr5uuw3x" path="res://assets/world_map/2 Objects/Grass/1.png" id="2_fmfvw"]
+[ext_resource type="Texture2D" uid="uid://cikky650f4us1" path="res://assets/world_map/2 Objects/Houses/1.png" id="2_tv5xw"]
+[ext_resource type="Texture2D" uid="uid://cxjtl05iuanv6" path="res://assets/world_map/2 Objects/Houses/2.png" id="3_26np5"]
+[ext_resource type="Texture2D" uid="uid://dlvtrwxmidcc5" path="res://assets/world_map/2 Objects/Houses/3.png" id="4_4ksml"]
+[ext_resource type="Texture2D" uid="uid://cioedd0hxcge8" path="res://assets/world_map/2 Objects/Houses/4.png" id="5_01v4v"]
+[ext_resource type="Texture2D" uid="uid://b822q6w6tvivq" path="res://assets/world_map/2 Objects/Houses/5.png" id="6_mxgj4"]
+[ext_resource type="Texture2D" uid="uid://4kqqvvx42l4e" path="res://assets/world_map/2 Objects/Houses/6.png" id="7_3n0gl"]
+[ext_resource type="Texture2D" uid="uid://cmedynx88jeaj" path="res://assets/world_map/2 Objects/Trees/1.png" id="8_x1jbd"]
+[ext_resource type="Texture2D" uid="uid://b0bnbk2cdjpvu" path="res://assets/world_map/2 Objects/Trees/2.png" id="9_blbij"]
+[ext_resource type="Texture2D" uid="uid://dkiq8565ombrx" path="res://assets/world_map/2 Objects/Trees/3.png" id="10_44f0p"]
+[ext_resource type="Texture2D" uid="uid://bj521jkllv2lq" path="res://assets/world_map/2 Objects/Trees/4.png" id="11_lqfx4"]
+[ext_resource type="Texture2D" uid="uid://c7fenleyq73s7" path="res://assets/world_map/2 Objects/Trees/5.png" id="12_1821v"]
+[ext_resource type="Texture2D" uid="uid://kj1jo35fflsf" path="res://assets/world_map/2 Objects/Trees/6.png" id="13_vvnpq"]
+[ext_resource type="Texture2D" uid="uid://uqbdai1uof7r" path="res://assets/world_map/2 Objects/Trees/7.png" id="14_lg5x3"]
+[ext_resource type="Texture2D" uid="uid://ch64xbsoa16cg" path="res://assets/world_map/2 Objects/Trees/8.png" id="15_gq6yq"]
+[ext_resource type="Texture2D" uid="uid://dmqdgkd76t0ce" path="res://assets/world_map/2 Objects/Trees/9.png" id="16_hompk"]
+[ext_resource type="Texture2D" uid="uid://c2ybgi8wbb1oh" path="res://assets/world_map/2 Objects/Grass/2.png" id="18_po58r"]
+[ext_resource type="Texture2D" uid="uid://d07k4um733hmy" path="res://assets/world_map/2 Objects/Grass/3.png" id="19_4lctx"]
+[ext_resource type="Texture2D" uid="uid://dcsb1gu3004kn" path="res://assets/world_map/2 Objects/Grass/4.png" id="20_gl6gi"]
+[ext_resource type="Texture2D" uid="uid://cj72n6kqseosp" path="res://assets/world_map/2 Objects/Grass/5.png" id="21_gdr6j"]
+[ext_resource type="Texture2D" uid="uid://di5tmftrm6f3e" path="res://assets/world_map/2 Objects/Grass/6.png" id="22_6cllb"]
+[ext_resource type="Texture2D" uid="uid://defb3xfnvfmke" path="res://assets/world_map/2 Objects/Grass/7.png" id="23_pcl1l"]
+[ext_resource type="Texture2D" uid="uid://gekrabbpkbqd" path="res://assets/world_map/2 Objects/Grass/8.png" id="24_4wcin"]
+[ext_resource type="Texture2D" uid="uid://biy3bigshu2id" path="res://assets/world_map/2 Objects/Grass/9.png" id="25_irojl"]
+[ext_resource type="Texture2D" uid="uid://cnfeuyi8i82lo" path="res://assets/world_map/2 Objects/Grass/10.png" id="26_efedi"]
+[ext_resource type="Texture2D" uid="uid://c38hx8p5e21sv" path="res://assets/world_map/5 Shadows/e1.png" id="27_j0cb6"]
+[ext_resource type="Texture2D" uid="uid://cdtd3ttnhuo2o" path="res://assets/world_map/5 Shadows/e2.png" id="28_d5h72"]
+[ext_resource type="Texture2D" uid="uid://542xkqf16nil" path="res://assets/world_map/5 Shadows/r3.png" id="29_ne38s"]
+[ext_resource type="Texture2D" uid="uid://csag2d3pm6u1b" path="res://assets/world_map/5 Shadows/r4.png" id="30_m604d"]
+[ext_resource type="Texture2D" uid="uid://hbdbj5gply7b" path="res://assets/world_map/5 Shadows/r5.png" id="31_mcf7c"]
+[ext_resource type="Texture2D" uid="uid://bwbqav2lwtuqo" path="res://assets/world_map/5 Shadows/r6.png" id="32_n7vvq"]
+[ext_resource type="Texture2D" uid="uid://c3jnrcbeetw3q" path="res://assets/world_map/5 Shadows/r7.png" id="33_624l0"]
+[ext_resource type="Texture2D" uid="uid://1r3bwuskhnra" path="res://assets/world_map/5 Shadows/r8.png" id="34_cmtjs"]
+[ext_resource type="Texture2D" uid="uid://c2pf43g1cua14" path="res://assets/world_map/5 Shadows/s1.png" id="35_w6aym"]
+[ext_resource type="Texture2D" uid="uid://ckydrl7b1r6ml" path="res://assets/world_map/5 Shadows/s2.png" id="36_jysas"]
+[ext_resource type="Texture2D" uid="uid://dqx74k4f6k0ig" path="res://assets/world_map/5 Shadows/s3.png" id="37_gbp1i"]
+[ext_resource type="Texture2D" uid="uid://b7jvydbex5eoc" path="res://assets/world_map/5 Shadows/s4.png" id="38_xxuk3"]
+[ext_resource type="Texture2D" uid="uid://dhgap7lo5tyop" path="res://assets/world_map/5 Shadows/e3.png" id="39_c6fed"]
+[ext_resource type="Texture2D" uid="uid://bguiaan72k2qm" path="res://assets/world_map/5 Shadows/s5.png" id="40_x0phe"]
+[ext_resource type="Texture2D" uid="uid://b6gowb5fu54fs" path="res://assets/world_map/5 Shadows/s6.png" id="41_xax3x"]
+[ext_resource type="Texture2D" uid="uid://dd8sq0iqhnc2e" path="res://assets/world_map/5 Shadows/s7.png" id="42_07sli"]
+[ext_resource type="Texture2D" uid="uid://b6w802uuwy0w1" path="res://assets/world_map/5 Shadows/s8.png" id="43_fp68s"]
+[ext_resource type="Texture2D" uid="uid://bpckupojeawcg" path="res://assets/world_map/5 Shadows/e4.png" id="44_mo6eq"]
+[ext_resource type="Texture2D" uid="uid://0rc04osrtnq4" path="res://assets/world_map/5 Shadows/e5.png" id="45_1l26g"]
+[ext_resource type="Texture2D" uid="uid://dm8fjwnsy4yla" path="res://assets/world_map/5 Shadows/e6.png" id="46_i6ivg"]
+[ext_resource type="Texture2D" uid="uid://c0rd7cqks35xh" path="res://assets/world_map/5 Shadows/e7.png" id="47_ya6uv"]
+[ext_resource type="Texture2D" uid="uid://b1oivltvlv070" path="res://assets/world_map/5 Shadows/e8.png" id="48_yxvw3"]
+[ext_resource type="Texture2D" uid="uid://begtisnno5o4l" path="res://assets/world_map/5 Shadows/r1.png" id="49_my4fb"]
+[ext_resource type="Texture2D" uid="uid://cepw7r5f0i3pk" path="res://assets/world_map/5 Shadows/r2.png" id="50_i1eo0"]
+[ext_resource type="Texture2D" uid="uid://4pf1b8vqmc3k" path="res://assets/world_map/3 UI/circle1.png" id="51_kspkl"]
+[ext_resource type="Texture2D" uid="uid://3ceueancspj0" path="res://assets/world_map/3 UI/circle2.png" id="52_h1bd7"]
+[ext_resource type="Texture2D" uid="uid://bmrl04scpkdy1" path="res://assets/world_map/3 UI/circle3.png" id="53_nx3a0"]
+[ext_resource type="Texture2D" uid="uid://cqpaeg3kmeb71" path="res://assets/world_map/3 UI/circle4.png" id="54_qjxuv"]
+[ext_resource type="Texture2D" uid="uid://bw3i737fkowof" path="res://assets/world_map/3 UI/circle5.png" id="55_dtwra"]
+[ext_resource type="Texture2D" uid="uid://djihayr8ngl71" path="res://assets/world_map/3 UI/Dot.png" id="56_rg4p0"]
+[ext_resource type="Texture2D" uid="uid://ckvfr0xjrf01w" path="res://assets/world_map/3 UI/Star1.png" id="57_hl4uv"]
+[ext_resource type="Texture2D" uid="uid://brb7pddb1o7sq" path="res://assets/world_map/3 UI/Star2.png" id="58_8un7o"]
+[ext_resource type="Texture2D" uid="uid://c2inlf7wn2r4w" path="res://assets/world_map/3 UI/Stars.png" id="59_pwepp"]
+[ext_resource type="Texture2D" uid="uid://cb0va3o7l1trw" path="res://assets/world_map/4 Fog/Fog_tiles.png" id="60_hdacq"]
+[ext_resource type="FontFile" uid="uid://c3vhg50rp7w4u" path="res://assets/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="61_kj0bo"]
+[ext_resource type="AudioStream" uid="uid://cm3h4w0ikf82d" path="res://assets/sound/03 - Definitely Our Town.mp3" id="62_bcgoe"]
+[ext_resource type="Script" path="res://Scenes/world/PathFollow2D.gd" id="64_m5era"]
+[ext_resource type="Script" path="res://Scenes/world/Player.gd" id="65_tr6h5"]
+[ext_resource type="PackedScene" uid="uid://cwmonlerr1i7" path="res://Scenes/player/idle.tscn" id="66_52al8"]
+[ext_resource type="Script" path="res://Scenes/world/level.gd" id="67_8iajp"]
+[ext_resource type="PackedScene" uid="uid://bhji25wvx1w4a" path="res://Scenes/player/run.tscn" id="67_bx055"]
+[ext_resource type="Texture2D" uid="uid://doy7fmeyknbqu" path="res://assets/operators/start_level_card.png" id="70_yrxdn"]
+[ext_resource type="Script" path="res://Scenes/world/Play.gd" id="71_cwiai"]
+[ext_resource type="Texture2D" uid="uid://bq1hgds8d487u" path="res://assets/operators/animation/start_level_card.png" id="72_uqvqf"]
+[ext_resource type="AudioStream" uid="uid://cf46oljplnbkl" path="res://assets/sound/card-sounds-35956.mp3" id="73_l6key"]
+[ext_resource type="Script" path="res://Scenes/world/Book.gd" id="74_6kga6"]
+[ext_resource type="Texture2D" uid="uid://duj8mj6004m10" path="res://assets/operators/card.png" id="74_yl4en"]
+[ext_resource type="Script" path="res://Scenes/world/skill_book.gd" id="75_ljc8u"]
+[ext_resource type="PackedScene" uid="uid://dc7o8kirf2ypa" path="res://Scenes/ui/game_end.tscn" id="75_u4ewb"]
+[ext_resource type="Script" path="res://Scenes/world/Menu.gd" id="77_w7m1x"]
+[ext_resource type="Texture2D" uid="uid://dqsxetwddy51e" path="res://assets/UI2/card.png" id="78_86h5x"]
+[ext_resource type="Script" path="res://Scenes/world/upgrade.gd" id="78_bkvly"]
+[ext_resource type="Texture2D" uid="uid://dy30gsg0ho1ig" path="res://assets/UI2/cards_stack_high.png" id="78_ovp5j"]
+[ext_resource type="Texture2D" uid="uid://cuvnu73efr21e" path="res://assets/UI2/suit_hearts.png" id="79_pdxkp"]
+[ext_resource type="Texture2D" uid="uid://xi26n7lt3xvw" path="res://assets/UI2/cards_stack.png" id="80_l54di"]
+[ext_resource type="StyleBox" uid="uid://nmvwoiurjlmq" path="res://save/button_orange.tres" id="81_51272"]
+[ext_resource type="Texture2D" uid="uid://cxn2aobmtngbp" path="res://assets/UI2/card_add.png" id="81_e0j7r"]
+[ext_resource type="Texture2D" uid="uid://bov3qgpkljr8k" path="res://assets/UI2/sword.png" id="82_84aua"]
+[ext_resource type="Texture2D" uid="uid://de6pgdv8vnf7s" path="res://assets/UI2/shield.png" id="83_wuj16"]
+[ext_resource type="Texture2D" uid="uid://bk4jntqa044gg" path="res://assets/UI2/hexagon_outline.png" id="87_3vfuv"]
+[ext_resource type="Script" path="res://Scenes/world/MenuWorld.gd" id="87_bvkyi"]
+[ext_resource type="Texture2D" uid="uid://cllg6b5fkmwo6" path="res://assets/UI2/book_closed.png" id="88_cskl6"]
+[ext_resource type="Texture2D" uid="uid://dlwaehdetivle" path="res://Scenes/avatar.png" id="90_31yfd"]
+[ext_resource type="Script" path="res://Scenes/world/perpisahan.gd" id="90_u5nng"]
+[ext_resource type="Script" path="res://Scenes/world/dialog.gd" id="92_c46pf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4185y"]
+texture = ExtResource("1_qiymr")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+21:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+21:14/0 = 0
+22:14/0 = 0
+23:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+17:15/0 = 0
+18:15/0 = 0
+23:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+17:16/0 = 0
+18:16/0 = 0
+20:16/0 = 0
+21:16/0 = 0
+23:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+13:17/0 = 0
+14:17/0 = 0
+15:17/0 = 0
+16:17/0 = 0
+17:17/0 = 0
+18:17/0 = 0
+20:17/0 = 0
+21:17/0 = 0
+23:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+13:18/0 = 0
+14:18/0 = 0
+15:18/0 = 0
+16:18/0 = 0
+17:18/0 = 0
+18:18/0 = 0
+23:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+10:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+19:19/0 = 0
+20:19/0 = 0
+21:19/0 = 0
+22:19/0 = 0
+23:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+8:20/0 = 0
+9:20/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+12:20/0 = 0
+13:20/0 = 0
+14:20/0 = 0
+15:20/0 = 0
+16:20/0 = 0
+17:20/0 = 0
+18:20/0 = 0
+19:20/0 = 0
+20:20/0 = 0
+21:20/0 = 0
+22:20/0 = 0
+23:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+13:21/0 = 0
+14:21/0 = 0
+15:21/0 = 0
+16:21/0 = 0
+17:21/0 = 0
+18:21/0 = 0
+19:21/0 = 0
+20:21/0 = 0
+21:21/0 = 0
+22:21/0 = 0
+23:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+10:22/0 = 0
+11:22/0 = 0
+13:22/0 = 0
+14:22/0 = 0
+15:22/0 = 0
+16:22/0 = 0
+17:22/0 = 0
+18:22/0 = 0
+19:22/0 = 0
+20:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+13:23/0 = 0
+14:23/0 = 0
+15:23/0 = 0
+16:23/0 = 0
+17:23/0 = 0
+18:23/0 = 0
+19:23/0 = 0
+20:23/0 = 0
+21:23/0 = 0
+21:22/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l5fhj"]
+sources/0 = SubResource("TileSetAtlasSource_4185y")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0wih"]
+texture = ExtResource("27_j0cb6")
+texture_region_size = Vector2i(6, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgoik"]
+texture = ExtResource("28_d5h72")
+texture_region_size = Vector2i(8, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6c21a"]
+texture = ExtResource("29_ne38s")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mxml"]
+texture = ExtResource("30_m604d")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3t08n"]
+texture = ExtResource("31_mcf7c")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p13vl"]
+texture = ExtResource("32_n7vvq")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypxfx"]
+texture = ExtResource("33_624l0")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bx4ul"]
+texture = ExtResource("34_cmtjs")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myacv"]
+texture = ExtResource("35_w6aym")
+texture_region_size = Vector2i(6, 6)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bbm7"]
+texture = ExtResource("36_jysas")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3civ8"]
+texture = ExtResource("37_gbp1i")
+texture_region_size = Vector2i(10, 10)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbqg6"]
+texture = ExtResource("38_xxuk3")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_64g1g"]
+texture = ExtResource("39_c6fed")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hs1p"]
+texture = ExtResource("40_x0phe")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8g22y"]
+texture = ExtResource("41_xax3x")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouqu2"]
+texture = ExtResource("42_07sli")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0sw5"]
+texture = ExtResource("43_fp68s")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v3ko0"]
+texture = ExtResource("44_mo6eq")
+texture_region_size = Vector2i(16, 11)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6b64"]
+texture = ExtResource("45_1l26g")
+texture_region_size = Vector2i(20, 15)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yht2l"]
+texture = ExtResource("46_i6ivg")
+texture_region_size = Vector2i(26, 19)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_17e60"]
+texture = ExtResource("47_ya6uv")
+texture_region_size = Vector2i(32, 23)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjmby"]
+texture = ExtResource("48_yxvw3")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1k802"]
+texture = ExtResource("49_my4fb")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jvrn"]
+texture = ExtResource("50_i1eo0")
+texture_region_size = Vector2i(2, 2)
+
+[sub_resource type="TileSet" id="TileSet_1mvbn"]
+tile_size = Vector2i(2, 2)
+sources/0 = SubResource("TileSetAtlasSource_k0wih")
+sources/1 = SubResource("TileSetAtlasSource_mgoik")
+sources/2 = SubResource("TileSetAtlasSource_64g1g")
+sources/3 = SubResource("TileSetAtlasSource_v3ko0")
+sources/4 = SubResource("TileSetAtlasSource_k6b64")
+sources/5 = SubResource("TileSetAtlasSource_yht2l")
+sources/6 = SubResource("TileSetAtlasSource_17e60")
+sources/7 = SubResource("TileSetAtlasSource_rjmby")
+sources/8 = SubResource("TileSetAtlasSource_1k802")
+sources/9 = SubResource("TileSetAtlasSource_0jvrn")
+sources/10 = SubResource("TileSetAtlasSource_6c21a")
+sources/11 = SubResource("TileSetAtlasSource_7mxml")
+sources/12 = SubResource("TileSetAtlasSource_3t08n")
+sources/13 = SubResource("TileSetAtlasSource_p13vl")
+sources/14 = SubResource("TileSetAtlasSource_ypxfx")
+sources/15 = SubResource("TileSetAtlasSource_bx4ul")
+sources/16 = SubResource("TileSetAtlasSource_myacv")
+sources/17 = SubResource("TileSetAtlasSource_8bbm7")
+sources/18 = SubResource("TileSetAtlasSource_3civ8")
+sources/19 = SubResource("TileSetAtlasSource_lbqg6")
+sources/20 = SubResource("TileSetAtlasSource_7hs1p")
+sources/21 = SubResource("TileSetAtlasSource_8g22y")
+sources/22 = SubResource("TileSetAtlasSource_ouqu2")
+sources/23 = SubResource("TileSetAtlasSource_w0sw5")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1r3g6"]
+texture = ExtResource("2_tv5xw")
+texture_region_size = Vector2i(32, 38)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_soaa0"]
+texture = ExtResource("3_26np5")
+texture_region_size = Vector2i(32, 38)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dmvor"]
+texture = ExtResource("4_4ksml")
+texture_region_size = Vector2i(43, 38)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6uyns"]
+texture = ExtResource("5_01v4v")
+texture_region_size = Vector2i(35, 63)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01fnb"]
+texture = ExtResource("6_mxgj4")
+texture_region_size = Vector2i(43, 40)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbgrb"]
+texture = ExtResource("7_3n0gl")
+texture_region_size = Vector2i(27, 26)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7k3eq"]
+sources/33 = SubResource("TileSetAtlasSource_1r3g6")
+sources/38 = SubResource("TileSetAtlasSource_soaa0")
+sources/39 = SubResource("TileSetAtlasSource_dmvor")
+sources/40 = SubResource("TileSetAtlasSource_6uyns")
+sources/41 = SubResource("TileSetAtlasSource_01fnb")
+sources/42 = SubResource("TileSetAtlasSource_rbgrb")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nb226"]
+texture = ExtResource("8_x1jbd")
+texture_region_size = Vector2i(27, 44)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xigoi"]
+texture = ExtResource("9_blbij")
+texture_region_size = Vector2i(23, 38)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ruo3"]
+texture = ExtResource("10_44f0p")
+texture_region_size = Vector2i(28, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77emu"]
+texture = ExtResource("11_lqfx4")
+texture_region_size = Vector2i(27, 39)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mbsi"]
+texture = ExtResource("12_1821v")
+texture_region_size = Vector2i(26, 38)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u12s8"]
+texture = ExtResource("13_vvnpq")
+texture_region_size = Vector2i(15, 22)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d4x2x"]
+texture = ExtResource("14_lg5x3")
+texture_region_size = Vector2i(10, 28)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utca0"]
+texture = ExtResource("15_gq6yq")
+texture_region_size = Vector2i(11, 37)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ge5e5"]
+texture = ExtResource("16_hompk")
+texture_region_size = Vector2i(10, 43)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qbt5y"]
+sources/0 = SubResource("TileSetAtlasSource_nb226")
+sources/1 = SubResource("TileSetAtlasSource_xigoi")
+sources/2 = SubResource("TileSetAtlasSource_5ruo3")
+sources/3 = SubResource("TileSetAtlasSource_77emu")
+sources/4 = SubResource("TileSetAtlasSource_1mbsi")
+sources/5 = SubResource("TileSetAtlasSource_u12s8")
+sources/6 = SubResource("TileSetAtlasSource_d4x2x")
+sources/7 = SubResource("TileSetAtlasSource_utca0")
+sources/8 = SubResource("TileSetAtlasSource_ge5e5")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ut5hd"]
+texture = ExtResource("2_fmfvw")
+texture_region_size = Vector2i(4, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kc3fm"]
+texture = ExtResource("18_po58r")
+texture_region_size = Vector2i(5, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vl071"]
+texture = ExtResource("19_4lctx")
+texture_region_size = Vector2i(5, 3)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y4osg"]
+texture = ExtResource("20_gl6gi")
+texture_region_size = Vector2i(5, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pvpe"]
+texture = ExtResource("21_gdr6j")
+texture_region_size = Vector2i(3, 4)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1q1ra"]
+texture = ExtResource("22_6cllb")
+texture_region_size = Vector2i(5, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ku8x"]
+texture = ExtResource("23_pcl1l")
+texture_region_size = Vector2i(5, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfg6y"]
+texture = ExtResource("24_4wcin")
+texture_region_size = Vector2i(8, 7)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ov653"]
+texture = ExtResource("25_irojl")
+texture_region_size = Vector2i(10, 7)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2rxlx"]
+texture = ExtResource("26_efedi")
+texture_region_size = Vector2i(11, 8)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g1mmy"]
+sources/0 = SubResource("TileSetAtlasSource_ut5hd")
+sources/1 = SubResource("TileSetAtlasSource_kc3fm")
+sources/2 = SubResource("TileSetAtlasSource_vl071")
+sources/3 = SubResource("TileSetAtlasSource_y4osg")
+sources/4 = SubResource("TileSetAtlasSource_3pvpe")
+sources/5 = SubResource("TileSetAtlasSource_1q1ra")
+sources/6 = SubResource("TileSetAtlasSource_8ku8x")
+sources/7 = SubResource("TileSetAtlasSource_pfg6y")
+sources/8 = SubResource("TileSetAtlasSource_ov653")
+sources/9 = SubResource("TileSetAtlasSource_2rxlx")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8vytm"]
+texture = ExtResource("1_qiymr")
+12:14/0 = 0
+12:15/0 = 0
+13:14/0 = 0
+13:15/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+21:14/0 = 0
+22:14/0 = 0
+22:15/0 = 0
+23:15/0 = 0
+21:15/0 = 0
+20:15/0 = 0
+19:15/0 = 0
+18:15/0 = 0
+17:15/0 = 0
+16:15/0 = 0
+15:15/0 = 0
+14:15/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+17:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+21:16/0 = 0
+22:16/0 = 0
+20:16/0 = 0
+23:16/0 = 0
+23:17/0 = 0
+22:18/0 = 0
+21:18/0 = 0
+20:18/0 = 0
+19:18/0 = 0
+18:18/0 = 0
+17:18/0 = 0
+16:18/0 = 0
+15:18/0 = 0
+14:18/0 = 0
+13:18/0 = 0
+12:18/0 = 0
+11:18/0 = 0
+10:18/0 = 0
+8:17/0 = 0
+8:18/0 = 0
+8:19/0 = 0
+8:20/0 = 0
+8:21/0 = 0
+8:22/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+12:23/0 = 0
+13:23/0 = 0
+14:23/0 = 0
+15:23/0 = 0
+16:23/0 = 0
+17:23/0 = 0
+18:23/0 = 0
+19:23/0 = 0
+20:23/0 = 0
+21:23/0 = 0
+22:23/0 = 0
+22:22/0 = 0
+23:22/0 = 0
+23:23/0 = 0
+13:22/0 = 0
+12:22/0 = 0
+11:22/0 = 0
+10:22/0 = 0
+9:22/0 = 0
+14:22/0 = 0
+15:22/0 = 0
+16:22/0 = 0
+17:22/0 = 0
+18:22/0 = 0
+19:22/0 = 0
+20:21/0 = 0
+21:21/0 = 0
+22:21/0 = 0
+23:21/0 = 0
+21:22/0 = 0
+20:22/0 = 0
+19:21/0 = 0
+18:20/0 = 0
+17:20/0 = 0
+16:20/0 = 0
+19:20/0 = 0
+20:20/0 = 0
+18:21/0 = 0
+17:21/0 = 0
+16:21/0 = 0
+15:21/0 = 0
+14:21/0 = 0
+13:21/0 = 0
+12:21/0 = 0
+11:21/0 = 0
+10:21/0 = 0
+9:21/0 = 0
+9:20/0 = 0
+9:18/0 = 0
+9:17/0 = 0
+9:19/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+13:17/0 = 0
+14:17/0 = 0
+15:17/0 = 0
+16:17/0 = 0
+17:17/0 = 0
+18:17/0 = 0
+19:17/0 = 0
+20:17/0 = 0
+21:17/0 = 0
+22:17/0 = 0
+23:18/0 = 0
+23:19/0 = 0
+23:20/0 = 0
+22:20/0 = 0
+21:20/0 = 0
+15:20/0 = 0
+14:20/0 = 0
+13:20/0 = 0
+12:19/0 = 0
+11:19/0 = 0
+10:19/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+12:20/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+19:19/0 = 0
+20:19/0 = 0
+21:19/0 = 0
+22:19/0 = 0
+23:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2f2ar"]
+sources/0 = SubResource("TileSetAtlasSource_8vytm")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5s37g"]
+texture = ExtResource("51_kspkl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dx4re"]
+texture = ExtResource("52_h1bd7")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7lt5l"]
+texture = ExtResource("53_nx3a0")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upetr"]
+texture = ExtResource("54_qjxuv")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k7ggg"]
+texture = ExtResource("55_dtwra")
+texture_region_size = Vector2i(37, 37)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0vic"]
+texture = ExtResource("56_rg4p0")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r52pq"]
+texture = ExtResource("57_hl4uv")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7pjgo"]
+texture = ExtResource("58_8un7o")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvm5e"]
+texture = ExtResource("59_pwepp")
+
+[sub_resource type="TileSet" id="TileSet_pgycq"]
+sources/0 = SubResource("TileSetAtlasSource_5s37g")
+sources/1 = SubResource("TileSetAtlasSource_dx4re")
+sources/2 = SubResource("TileSetAtlasSource_7lt5l")
+sources/3 = SubResource("TileSetAtlasSource_upetr")
+sources/4 = SubResource("TileSetAtlasSource_k7ggg")
+sources/5 = SubResource("TileSetAtlasSource_b0vic")
+sources/6 = SubResource("TileSetAtlasSource_r52pq")
+sources/7 = SubResource("TileSetAtlasSource_7pjgo")
+sources/8 = SubResource("TileSetAtlasSource_dvm5e")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2hu4d"]
+texture = ExtResource("60_hdacq")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jnq8j"]
+sources/18 = SubResource("TileSetAtlasSource_2hu4d")
+
+[sub_resource type="Curve2D" id="Curve2D_rqmlb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 6.5, 0, 0, 0, 0, 0.75, -24.25, 0, 0, 0, 0, -41.25, -24, 0, 0, 0, 0, -41.75, -150.25)
+}
+point_count = 4
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iofo1"]
+radius = 3.75832
+
+[sub_resource type="Animation" id="Animation_u6ljr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Player/Play/card:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D/Player/Play:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23.5, -15)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Path2D/PathFollow2D/Player/Play/card:frame_coords")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cnhqw"]
+resource_name = "flip"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Player/Play/card:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0), Vector2i(7, 0), Vector2i(8, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y2hei"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Player/Play/card:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_vhkfd"]
+resource_name = "idle"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Player/Play:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23.75, -9.75), Vector2(-23.75, -12.5)]
+}
+
+[sub_resource type="Animation" id="Animation_cxbhc"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Player/Play/card:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0g41c"]
+_data = {
+"RESET": SubResource("Animation_u6ljr"),
+"flip": SubResource("Animation_cnhqw"),
+"hide": SubResource("Animation_y2hei"),
+"idle": SubResource("Animation_vhkfd"),
+"show": SubResource("Animation_cxbhc")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_338cl"]
+radius = 28.4429
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbjvn"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
+bg_color = Color(0.252818, 0.0168886, 0.00893255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1y35x"]
+bg_color = Color(0.00401167, 0.0298853, 0.164296, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukdwg"]
+bg_color = Color(0.0388635, 0.00546569, 0.169765, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osk31"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.254902, 0.6, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aygrr"]
+content_margin_left = 40.0
+content_margin_right = 40.0
+bg_color = Color(0.125911, 0.125911, 0.125911, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3kh3"]
+bg_color = Color(0, 0, 0, 0.768627)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1js5"]
+bg_color = Color(0.481113, 0.0268524, 0.481219, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvjf4"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.728472, 0.580679, 0.0977385, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rt4n8"]
+bg_color = Color(0.0117647, 0.0431373, 0.113725, 1)
+
+[node name="World_Map" type="Node2D"]
+script = ExtResource("1_ppf82")
+
+[node name="Map" type="Node2D" parent="."]
+position = Vector2(-8, -28)
+scale = Vector2(1.5, 1.5)
+
+[node name="TileSet" type="TileMap" parent="Map"]
+position = Vector2(464, -30)
+tile_set = SubResource("TileSet_l5fhj")
+format = 2
+layer_0/tile_data = PackedInt32Array(2097130, 1376256, 3, 2162666, 1376256, 3, 2228202, 1376256, 3, 2293738, 1376256, 3, 2359274, 1376256, 3, 2424810, 1376256, 3, 2490346, 1376256, 3, 2555882, 1376256, 3, 2621418, 1310720, 6, 2686954, 1441792, 9, 2752490, 1441792, 9, 2818026, 1441792, 9, 2097131, 1376256, 3, 2162667, 1376256, 3, 2228203, 1376256, 3, 2293739, 1376256, 3, 2359275, 1376256, 3, 2424811, 1376256, 3, 2490347, 1376256, 3, 2555883, 1376256, 3, 2621419, 1376256, 3, 2686955, 1376256, 3, 2752491, 1376256, 3, 2818027, 1376256, 3, 2097132, 1376256, 3, 2162668, 1376256, 3, 2228204, 1376256, 3, 2293740, 1376256, 3, 2359276, 1376256, 3, 2424812, 1376256, 3, 2490348, 1376256, 3, 2555884, 1376256, 3, 2621420, 1376256, 3, 2686956, 1376256, 3, 2752492, 1376256, 3, 2818028, 1376256, 3, 2097133, 1376256, 3, 2162669, 1376256, 3, 2228205, 1376256, 3, 2293741, 1376256, 3, 2359277, 1376256, 3, 2424813, 1376256, 3, 2490349, 1376256, 3, 2555885, 1376256, 3, 2621421, 1376256, 3, 2686957, 1376256, 3, 2752493, 1376256, 3, 2818029, 1376256, 3, 2097134, 1376256, 3, 2162670, 1376256, 3, 2228206, 1376256, 3, 2293742, 1376256, 3, 2359278, 1376256, 3, 2424814, 1376256, 3, 2490350, 1376256, 3, 2555886, 1376256, 3, 2621422, 1376256, 3, 2686958, 1376256, 3, 2752494, 1376256, 3, 2818030, 1376256, 3, 2097135, 1376256, 3, 2162671, 1376256, 3, 2228207, 1376256, 3, 2293743, 1376256, 3, 2359279, 1376256, 3, 2424815, 1376256, 3, 2490351, 1376256, 3, 2555887, 1376256, 3, 2621423, 1376256, 3, 2686959, 1376256, 3, 2752495, 1376256, 3, 2818031, 1376256, 3, 2097136, 1376256, 3, 2162672, 1376256, 3, 2228208, 1376256, 3, 2293744, 1376256, 3, 2359280, 1376256, 3, 2424816, 1376256, 3, 2490352, 1376256, 3, 2555888, 1376256, 3, 2621424, 1376256, 3, 2686960, 1376256, 3, 2752496, 1376256, 3, 2818032, 1376256, 3, 2097137, 1376256, 3, 2162673, 1376256, 3, 2228209, 1376256, 3, 2293745, 1376256, 3, 2359281, 1376256, 3, 2424817, 1376256, 3, 2490353, 1376256, 3, 2555889, 1376256, 3, 2621425, 1376256, 3, 2686961, 1376256, 3, 2752497, 1376256, 3, 2818033, 1376256, 3, 2097138, 1376256, 3, 2162674, 1376256, 3, 2228210, 1376256, 3, 2293746, 1376256, 3, 2359282, 1376256, 3, 2424818, 1376256, 3, 2490354, 1376256, 3, 2555890, 1376256, 3, 2621426, 1376256, 3, 2686962, 1376256, 3, 2752498, 1376256, 3, 2818034, 1376256, 3, 2097139, 1376256, 3, 2162675, 1376256, 3, 2228211, 1376256, 3, 2293747, 1376256, 3, 2359283, 1376256, 3, 2424819, 1376256, 3, 2490355, 1376256, 3, 2555891, 1376256, 3, 2621427, 1376256, 3, 2686963, 1376256, 3, 2752499, 1376256, 3, 2818035, 1376256, 3, 2097140, 1376256, 3, 2162676, 1376256, 3, 2228212, 1376256, 3, 2293748, 1376256, 3, 2359284, 1376256, 3, 2424820, 1376256, 3, 2490356, 1376256, 3, 2555892, 1376256, 3, 2621428, 1376256, 3, 2686964, 1376256, 3, 2752500, 1376256, 3, 2818036, 1376256, 3, 2097141, 1376256, 3, 2162677, 1376256, 3, 2228213, 1376256, 3, 2293749, 1376256, 3, 2359285, 1376256, 3, 2424821, 1376256, 3, 2490357, 1376256, 3, 2555893, 1376256, 3, 2621429, 1376256, 3, 2686965, 1376256, 3, 2752501, 1376256, 3, 2818037, 1376256, 3, 2097142, 1376256, 3, 2162678, 1376256, 3, 2228214, 1376256, 3, 2293750, 1376256, 3, 2359286, 1376256, 3, 2424822, 1376256, 3, 2490358, 1376256, 3, 2555894, 1376256, 3, 2621430, 1376256, 3, 2686966, 1376256, 3, 2752502, 1376256, 3, 2818038, 1376256, 3, 2097143, 1376256, 3, 2162679, 1376256, 3, 2228215, 1376256, 3, 2293751, 1376256, 3, 2359287, 1376256, 3, 2424823, 1376256, 3, 2490359, 1376256, 3, 2555895, 1376256, 3, 2621431, 1376256, 3, 2686967, 1376256, 3, 2752503, 1376256, 3, 2818039, 1376256, 3, 2097144, 1376256, 3, 2162680, 1376256, 3, 2228216, 1376256, 3, 2293752, 1376256, 3, 2359288, 1376256, 3, 2424824, 1376256, 3, 2490360, 1376256, 3, 2555896, 1376256, 3, 2621432, 1376256, 3, 2686968, 1376256, 3, 2752504, 1376256, 3, 2818040, 1376256, 3, 2097145, 1376256, 3, 2162681, 1376256, 3, 2228217, 1376256, 3, 2293753, 1376256, 3, 2359289, 1376256, 3, 2424825, 1376256, 3, 2490361, 1376256, 3, 2555897, 1376256, 3, 2621433, 1376256, 3, 2686969, 1376256, 3, 2752505, 1376256, 3, 2818041, 1376256, 3, 2097146, 1376256, 3, 2162682, 1376256, 3, 2228218, 1376256, 3, 2293754, 1376256, 3, 2359290, 1376256, 3, 2424826, 1376256, 3, 2490362, 1376256, 3, 2555898, 1376256, 3, 2621434, 1376256, 3, 2686970, 1376256, 3, 2752506, 1376256, 3, 2818042, 1376256, 3, 2097147, 1376256, 3, 2162683, 1376256, 3, 2228219, 1376256, 3, 2293755, 1376256, 3, 2359291, 1376256, 3, 2424827, 1376256, 3, 2490363, 1376256, 3, 2555899, 1376256, 3, 2621435, 1376256, 3, 2686971, 1376256, 3, 2752507, 1376256, 3, 2818043, 1376256, 3, 2097148, 1376256, 3, 2162684, 1376256, 3, 2228220, 1376256, 3, 2293756, 1376256, 3, 2359292, 1376256, 3, 2424828, 1376256, 3, 2490364, 1376256, 3, 2555900, 1376256, 3, 2621436, 1376256, 3, 2686972, 1376256, 3, 2752508, 1376256, 3, 2818044, 1376256, 3, 2097149, 1376256, 3, 2162685, 1376256, 3, 2228221, 1376256, 3, 2293757, 1376256, 3, 2359293, 1376256, 3, 2424829, 1376256, 3, 2490365, 1376256, 3, 2555901, 1376256, 3, 2621437, 1376256, 3, 2686973, 1376256, 3, 2752509, 1376256, 3, 2818045, 1376256, 3, 2097150, 1376256, 3, 2162686, 1376256, 3, 2228222, 1376256, 3, 2293758, 1376256, 3, 2359294, 1376256, 3, 2424830, 1376256, 3, 2490366, 1376256, 3, 2555902, 1376256, 3, 2621438, 1376256, 3, 2686974, 1376256, 3, 2752510, 1376256, 3, 2818046, 1376256, 3, 2097151, 1376256, 3, 2162687, 1376256, 3, 2228223, 1376256, 3, 2293759, 1376256, 3, 2359295, 1376256, 3, 2424831, 1376256, 3, 2490367, 1376256, 3, 2555903, 1376256, 3, 2621439, 1376256, 3, 2686975, 1376256, 3, 2752511, 1376256, 3, 2818047, 1376256, 3, 2031616, 1376256, 3, 2097152, 1376256, 3, 2162688, 1376256, 3, 2228224, 1376256, 3, 2293760, 1376256, 3, 2359296, 1376256, 3, 2424832, 1376256, 3, 2490368, 1376256, 3, 2555904, 1376256, 3, 2621440, 1376256, 3, 2686976, 1376256, 3, 2752512, 1376256, 3, 2031617, 1376256, 3, 2097153, 1376256, 3, 2162689, 1376256, 3, 2228225, 1376256, 3, 2293761, 1376256, 3, 2359297, 1376256, 3, 2424833, 1376256, 3, 2490369, 1376256, 3, 2555905, 1376256, 3, 2621441, 1376256, 3, 2686977, 1376256, 3, 2752513, 1376256, 3, 2031618, 1376256, 3, 2097154, 1376256, 3, 2162690, 1376256, 3, 2228226, 1376256, 3, 2293762, 1376256, 3, 2359298, 1376256, 3, 2424834, 1376256, 3, 2490370, 1376256, 3, 2555906, 1376256, 3, 2621442, 1376256, 3, 2686978, 1376256, 3, 2752514, 1376256, 3, 2031619, 1376256, 3, 2097155, 1376256, 3, 2162691, 1376256, 3, 2228227, 1376256, 3, 2293763, 1376256, 3, 2359299, 1376256, 3, 2424835, 1376256, 3, 2490371, 1376256, 3, 2555907, 1376256, 3, 2621443, 1376256, 3, 2686979, 1376256, 3, 2752515, 1376256, 3, 2031620, 1376256, 3, 2097156, 1376256, 3, 2162692, 1376256, 3, 2228228, 1376256, 3, 2293764, 1376256, 3, 2359300, 1376256, 3, 2424836, 1376256, 3, 2490372, 1376256, 3, 2555908, 1376256, 3, 2621444, 1376256, 3, 2686980, 1376256, 3, 2752516, 1376256, 3, 2031621, 1376256, 3, 2097157, 1376256, 3, 2162693, 1376256, 3, 2228229, 1376256, 3, 2293765, 1376256, 3, 2359301, 1376256, 3, 2424837, 1376256, 3, 2490373, 1376256, 3, 2555909, 1376256, 3, 2621445, 1376256, 3, 2686981, 1376256, 3, 2752517, 1376256, 3, 2097120, 720896, 3, 2162656, 720896, 3, 2228192, 720896, 3, 2293728, 720896, 9, 2359264, 720896, 9, 2424800, 720896, 9, 2490336, 720896, 9, 2555872, 720896, 9, 2621408, 720896, 9, 2686944, 720896, 9, 2752480, 720896, 9, 2818016, 720896, 9, 2097121, 0, 4, 2162657, 0, 4, 2228193, 0, 4, 2293729, 262144, 9, 2359265, 262144, 9, 2424801, 262144, 9, 2490337, 262144, 9, 2555873, 262144, 9, 2621409, 262144, 9, 2686945, 262144, 9, 2752481, 262144, 9, 2818017, 262144, 9, 2097122, 0, 1, 2162658, 0, 2, 2228194, 0, 0, 2293730, 0, 0, 2359266, 0, 1, 2424802, 131072, 10, 2490338, 0, 2, 2555874, 0, 1, 2621410, 0, 2, 2686946, 0, 0, 2752482, 0, 1, 2818018, 0, 0, 2097123, 65536, 1, 2162659, 65536, 2, 2228195, 65536, 0, 2293731, 65536, 0, 2359267, 65536, 1, 2424803, 65536, 0, 2490339, 65536, 0, 2555875, 65536, 1, 2621411, 65536, 2, 2686947, 65536, 0, 2752483, 65536, 1, 2818019, 65536, 0, 2097124, 131072, 1, 2162660, 131072, 2, 2228196, 131072, 0, 2293732, 0, 0, 2359268, 131072, 1, 2424804, 131072, 0, 2490340, 131072, 2, 2555876, 131072, 1, 2621412, 131072, 2, 2686948, 131072, 0, 2752484, 131072, 1, 2818020, 131072, 2, 2097125, 196608, 3, 2162661, 196608, 2, 2228197, 196608, 0, 2293733, 196608, 2, 2359269, 196608, 3, 2424805, 196608, 2, 2490341, 196608, 2, 2555877, 196608, 3, 2621413, 196608, 2, 2686949, 196608, 2, 2752485, 196608, 4, 2818021, 65536, 0, 2097126, 1179648, 2, 2162662, 1179648, 2, 2228198, 1179648, 2, 2293734, 1179648, 2, 2359270, 1179648, 2, 2424806, 1179648, 2, 2490342, 1179648, 2, 2555878, 1179648, 2, 2621414, 1179648, 4, 2686950, 1179648, 5, 2752486, 262144, 7, 2818022, 262144, 8, 2097127, 1376256, 3, 2162663, 1376256, 3, 2228199, 1376256, 3, 2293735, 1376256, 3, 2359271, 1376256, 3, 2424807, 1376256, 3, 2490343, 1376256, 3, 2555879, 1376256, 3, 2621415, 1245184, 4, 2686951, 1245184, 5, 2752487, 262144, 7, 2818023, 65536, 0, 2097128, 1376256, 3, 2162664, 1376256, 3, 2228200, 1376256, 3, 2293736, 1376256, 3, 2359272, 1376256, 3, 2424808, 1376256, 3, 2490344, 1376256, 3, 2555880, 1376256, 3, 2621416, 1245184, 4, 2686952, 1245184, 5, 2752488, 262144, 7, 2818024, 262144, 8, 2097129, 1376256, 3, 2162665, 1376256, 3, 2228201, 1376256, 3, 2293737, 1376256, 3, 2359273, 1376256, 3, 2424809, 1376256, 3, 2490345, 1376256, 3, 2555881, 1376256, 3, 2621417, 1245184, 4, 2686953, 1245184, 5, 2752489, 262144, 7, 2818025, 65536, 0, 2097111, 589824, 2, 2162647, 589824, 2, 2228183, 589824, 2, 2293719, 589824, 2, 2359255, 589824, 2, 2424791, 589824, 2, 2490327, 589824, 2, 2555863, 589824, 2, 2621399, 589824, 2, 2686935, 589824, 2, 2752471, 589824, 2, 2818007, 589824, 2, 2883543, 589824, 2, 2949079, 589824, 2, 3014615, 589824, 2, 3080151, 589824, 2, 2097112, 589824, 2, 2162648, 589824, 2, 2228184, 589824, 2, 2293720, 589824, 2, 2359256, 589824, 2, 2424792, 589824, 2, 2490328, 589824, 2, 2555864, 589824, 2, 2621400, 589824, 2, 2686936, 589824, 2, 2752472, 589824, 2, 2818008, 589824, 2, 2883544, 589824, 2, 2949080, 589824, 2, 3014616, 589824, 2, 3080152, 589824, 2, 2097113, 589824, 2, 2162649, 589824, 2, 2228185, 589824, 2, 2293721, 589824, 2, 2359257, 589824, 2, 2424793, 589824, 2, 2490329, 589824, 2, 2555865, 589824, 2, 2621401, 589824, 2, 2686937, 589824, 2, 2752473, 589824, 2, 2818009, 589824, 2, 2883545, 589824, 2, 2949081, 589824, 2, 3014617, 589824, 2, 3080153, 589824, 2, 2097114, 589824, 2, 2162650, 589824, 2, 2228186, 589824, 2, 2293722, 589824, 2, 2359258, 589824, 2, 2424794, 589824, 2, 2490330, 589824, 2, 2555866, 589824, 2, 2621402, 589824, 2, 2686938, 589824, 2, 2752474, 589824, 2, 2818010, 589824, 2, 2883546, 589824, 2, 2949082, 589824, 2, 3014618, 589824, 2, 3080154, 589824, 2, 2097115, 589824, 2, 2162651, 589824, 2, 2228187, 589824, 2, 2293723, 589824, 2, 2359259, 589824, 2, 2424795, 589824, 2, 2490331, 589824, 2, 2555867, 589824, 2, 2621403, 589824, 2, 2686939, 589824, 2, 2752475, 589824, 2, 2818011, 589824, 2, 2883547, 589824, 2, 2949083, 589824, 2, 3014619, 589824, 2, 3080155, 589824, 2, 2097116, 589824, 2, 2162652, 589824, 2, 2228188, 589824, 2, 2293724, 589824, 2, 2359260, 589824, 2, 2424796, 589824, 2, 2490332, 589824, 2, 2555868, 589824, 2, 2621404, 589824, 2, 2686940, 589824, 2, 2752476, 589824, 2, 2818012, 589824, 2, 2883548, 589824, 2, 2949084, 589824, 2, 3014620, 589824, 2, 3080156, 589824, 2, 2097117, 589824, 2, 2162653, 589824, 2, 2228189, 589824, 2, 2293725, 589824, 2, 2359261, 589824, 2, 2424797, 589824, 2, 2490333, 589824, 2, 2555869, 589824, 2, 2621405, 589824, 2, 2686941, 589824, 2, 2752477, 589824, 2, 2818013, 589824, 2, 2883549, 589824, 2, 2949085, 589824, 2, 3014621, 589824, 2, 3080157, 589824, 2, 2097118, 589824, 2, 2162654, 589824, 2, 2228190, 589824, 2, 2293726, 589824, 2, 2359262, 589824, 2, 2424798, 589824, 2, 2490334, 589824, 2, 2555870, 589824, 2, 2621406, 589824, 2, 2686942, 589824, 2, 2752478, 589824, 2, 2818014, 589824, 2, 2883550, 589824, 2, 2949086, 589824, 2, 3014622, 589824, 2, 3080158, 589824, 2, 2097119, 589824, 2, 2162655, 589824, 2, 2228191, 589824, 2, 2293727, 589824, 2, 2359263, 589824, 2, 2424799, 589824, 2, 2490335, 589824, 2, 2555871, 589824, 2, 2621407, 589824, 2, 2686943, 589824, 2, 2752479, 589824, 2, 2818015, 589824, 2, 2883551, 589824, 2, 2949087, 589824, 2, 3014623, 589824, 2, 3080159, 589824, 2, 2883552, 720896, 9, 2949088, 720896, 9, 3014624, 720896, 9, 3080160, 720896, 9, 2883553, 262144, 9, 2949089, 262144, 9, 3014625, 262144, 9, 3080161, 262144, 9, 2883554, 0, 1, 2949090, 0, 0, 3014626, 0, 1, 3080162, 0, 2, 2883555, 65536, 1, 2949091, 65536, 0, 3014627, 65536, 1, 3080163, 65536, 2, 2883556, 131072, 0, 2949092, 131072, 2, 3014628, 131072, 0, 3080164, 131072, 10, 2883557, 65536, 2, 2949093, 1376256, 3, 3014629, 1376256, 3, 3080165, 1376256, 3, 2883558, 262144, 8, 2949094, 1376256, 3, 3014630, 1376256, 3, 3080166, 1376256, 3, 2883559, 65536, 0, 2949095, 1376256, 3, 3014631, 1376256, 3, 3080167, 1376256, 3, 2883560, 262144, 8, 2949096, 1376256, 3, 3014632, 1376256, 3, 3080168, 1376256, 3, 2883561, 65536, 0, 2949097, 1376256, 3, 3014633, 1376256, 3, 3080169, 1376256, 3, 2883562, 1441792, 9, 2949098, 1376256, 3, 3014634, 1376256, 3, 3080170, 1376256, 3, 2883563, 1376256, 3, 2949099, 1376256, 3, 3014635, 1376256, 3, 3080171, 1376256, 3, 2883564, 1376256, 3, 2949100, 1376256, 3, 3014636, 1376256, 3, 3080172, 1376256, 3, 2883565, 1376256, 3, 2949101, 1376256, 3, 3014637, 1376256, 3, 3080173, 1376256, 3, 2883566, 1376256, 3, 2949102, 1376256, 3, 3014638, 1376256, 3, 3080174, 1376256, 3, 3145710, 1376256, 3, 3211246, 1376256, 3, 3276782, 1376256, 3, 2883567, 1376256, 3, 2949103, 1376256, 3, 3014639, 1376256, 3, 3080175, 1376256, 3, 3145711, 1376256, 3, 3211247, 1376256, 3, 3276783, 1376256, 3, 2883568, 1376256, 3, 2949104, 1376256, 3, 3014640, 1376256, 3, 3080176, 1376256, 3, 3145712, 1376256, 3, 3211248, 1376256, 3, 3276784, 1376256, 3, 2883569, 1376256, 3, 2949105, 1376256, 3, 3014641, 1376256, 3, 3080177, 1376256, 3, 3145713, 1376256, 3, 3211249, 1376256, 3, 3276785, 1376256, 3, 2883570, 1376256, 3, 2949106, 1376256, 3, 3014642, 1376256, 3, 3080178, 1376256, 3, 3145714, 1376256, 3, 3211250, 1376256, 3, 3276786, 1376256, 3, 2883571, 1376256, 3, 2949107, 1376256, 3, 3014643, 1376256, 3, 3080179, 1376256, 3, 3145715, 1376256, 3, 3211251, 1376256, 3, 3276787, 1376256, 3, 2883572, 1376256, 3, 2949108, 1376256, 3, 3014644, 1376256, 3, 3080180, 1376256, 3, 3145716, 1376256, 3, 3211252, 1376256, 3, 3276788, 1376256, 3, 2883573, 1376256, 3, 2949109, 1376256, 3, 3014645, 1376256, 3, 3080181, 1376256, 3, 3145717, 1376256, 3, 3211253, 1376256, 3, 3276789, 1376256, 3, 2883574, 1376256, 3, 2949110, 1376256, 3, 3014646, 1376256, 3, 3080182, 1376256, 3, 3145718, 1376256, 3, 3211254, 1376256, 3, 3276790, 1376256, 3, 2883575, 1376256, 3, 2949111, 1376256, 3, 3014647, 1376256, 3, 3080183, 1376256, 3, 3145719, 1376256, 3, 3211255, 1376256, 3, 3276791, 1376256, 3, 2883576, 1376256, 3, 2949112, 1376256, 3, 3014648, 1376256, 3, 3080184, 1376256, 3, 3145720, 1376256, 3, 3211256, 1376256, 3, 3276792, 1376256, 3, 2883577, 1376256, 3, 2949113, 1376256, 3, 3014649, 1376256, 3, 3080185, 1376256, 3, 3145721, 1376256, 3, 3211257, 1376256, 3, 3276793, 1376256, 3, 2883578, 1376256, 3, 2949114, 1376256, 3, 3014650, 1376256, 3, 3080186, 1376256, 3, 3145722, 1376256, 3, 3211258, 1376256, 3, 3276794, 1376256, 3, 2883579, 1376256, 3, 2949115, 1376256, 3, 3014651, 1376256, 3, 3080187, 1376256, 3, 3145723, 1376256, 3, 3211259, 1376256, 3, 3276795, 1376256, 3, 2883580, 1376256, 3, 2949116, 1376256, 3, 3014652, 1376256, 3, 3080188, 1376256, 3, 3145724, 1376256, 3, 3211260, 1376256, 3, 3276796, 1376256, 3, 2883581, 1376256, 3, 2949117, 1376256, 3, 3014653, 1376256, 3, 3080189, 1376256, 3, 3145725, 1376256, 3, 3211261, 1376256, 3, 3276797, 1376256, 3, 2883582, 1376256, 3, 2949118, 1376256, 3, 3014654, 1376256, 3, 3080190, 1376256, 3, 3145726, 1376256, 3, 3211262, 1376256, 3, 3276798, 1376256, 3, 2883583, 1376256, 3, 2949119, 1376256, 3, 3014655, 1376256, 3, 3080191, 1376256, 3, 3145727, 1376256, 3, 3211263, 1376256, 3, 3276799, 1376256, 3, 1703910, 1179648, 2, 1769446, 1179648, 2, 1834982, 1179648, 2, 1900518, 1179648, 2, 1966054, 1179648, 2, 2031590, 1179648, 2, 1638374, 1179648, 0, 1638375, 1310720, 0, 1638376, 1310720, 0, 1638377, 1310720, 0, 1638378, 1310720, 0, 1638379, 1310720, 0, 1638380, 1310720, 0, 1638381, 1310720, 0, 1638382, 1310720, 0, 1638383, 1310720, 0, 1638384, 1310720, 0, 1638385, 1310720, 0, 1638386, 1310720, 0, 1638387, 1310720, 0, 1638388, 1310720, 0, 1638389, 1310720, 0, 1638390, 1310720, 0, 1638391, 1310720, 0, 1638392, 1310720, 0, 1638393, 1310720, 0, 1638394, 1310720, 0, 1638395, 1310720, 0, 1638396, 1310720, 0, 1703911, 1376256, 3, 1769447, 1376256, 3, 1834983, 1376256, 3, 1900519, 1376256, 3, 1966055, 1376256, 3, 2031591, 1376256, 3, 1703912, 1376256, 3, 1769448, 1376256, 3, 1834984, 1376256, 3, 1900520, 1376256, 3, 1966056, 1376256, 3, 2031592, 1376256, 3, 1703913, 1376256, 3, 1769449, 1376256, 3, 1834985, 1376256, 3, 1900521, 1376256, 3, 1966057, 1376256, 3, 2031593, 1376256, 3, 1703914, 1376256, 3, 1769450, 1376256, 3, 1834986, 1376256, 3, 1900522, 1376256, 3, 1966058, 1376256, 3, 2031594, 1376256, 3, 1703915, 1376256, 3, 1769451, 1376256, 3, 1834987, 1376256, 3, 1900523, 1376256, 3, 1966059, 1376256, 3, 2031595, 1376256, 3, 1703916, 1376256, 3, 1769452, 1376256, 3, 1834988, 1376256, 3, 1900524, 1376256, 3, 1966060, 1376256, 3, 2031596, 1376256, 3, 1703917, 1376256, 3, 1769453, 1376256, 3, 1834989, 1376256, 3, 1900525, 1376256, 3, 1966061, 1376256, 3, 2031597, 1376256, 3, 1703918, 1376256, 3, 1769454, 1376256, 3, 1834990, 1376256, 3, 1900526, 1376256, 3, 1966062, 1376256, 3, 2031598, 1376256, 3, 1703919, 1376256, 3, 1769455, 1376256, 3, 1834991, 1376256, 3, 1900527, 1376256, 3, 1966063, 1376256, 3, 2031599, 1376256, 3, 1703920, 1376256, 3, 1769456, 1376256, 3, 1834992, 1376256, 3, 1900528, 1376256, 3, 1966064, 1376256, 3, 2031600, 1376256, 3, 1703921, 1376256, 3, 1769457, 1376256, 3, 1834993, 1376256, 3, 1900529, 1376256, 3, 1966065, 1376256, 3, 2031601, 1376256, 3, 1703922, 1376256, 3, 1769458, 1376256, 3, 1834994, 1376256, 3, 1900530, 1376256, 3, 1966066, 1376256, 3, 2031602, 1376256, 3, 1703923, 1376256, 3, 1769459, 1376256, 3, 1834995, 1376256, 3, 1900531, 1376256, 3, 1966067, 1376256, 3, 2031603, 1376256, 3, 1703924, 1376256, 3, 1769460, 1376256, 3, 1834996, 1376256, 3, 1900532, 1376256, 3, 1966068, 1376256, 3, 2031604, 1376256, 3, 1703925, 1376256, 3, 1769461, 1376256, 3, 1834997, 1376256, 3, 1900533, 1376256, 3, 1966069, 1376256, 3, 2031605, 1376256, 3, 1703926, 1376256, 3, 1769462, 1376256, 3, 1834998, 1376256, 3, 1900534, 1376256, 3, 1966070, 1376256, 3, 2031606, 1376256, 3, 1703927, 1376256, 3, 1769463, 1376256, 3, 1834999, 1376256, 3, 1900535, 1376256, 3, 1966071, 1376256, 3, 2031607, 1376256, 3, 1703928, 1376256, 3, 1769464, 1376256, 3, 1835000, 1376256, 3, 1900536, 1376256, 3, 1966072, 1376256, 3, 2031608, 1376256, 3, 1703929, 1376256, 3, 1769465, 1376256, 3, 1835001, 1376256, 3, 1900537, 1376256, 3, 1966073, 1376256, 3, 2031609, 1376256, 3, 1703930, 1376256, 3, 1769466, 1376256, 3, 1835002, 1376256, 3, 1900538, 1376256, 3, 1966074, 1376256, 3, 2031610, 1376256, 3, 1703931, 1376256, 3, 1769467, 1376256, 3, 1835003, 1376256, 3, 1900539, 1376256, 3, 1966075, 1376256, 3, 2031611, 1376256, 3, 1703932, 1376256, 3, 1769468, 1376256, 3, 1835004, 1376256, 3, 1900540, 1376256, 3, 1966076, 1376256, 3, 2031612, 1376256, 3, 1703933, 1376256, 3, 1769469, 1376256, 3, 1835005, 1376256, 3, 1900541, 1376256, 3, 1966077, 1376256, 3, 2031613, 1376256, 3, 1703934, 1376256, 3, 1769470, 1376256, 3, 1835006, 1376256, 3, 1900542, 1376256, 3, 1966078, 1376256, 3, 2031614, 1376256, 3, 1703935, 1376256, 3, 1769471, 1376256, 3, 1835007, 1376256, 3, 1900543, 1376256, 3, 1966079, 1376256, 3, 2031615, 1376256, 3, 2031586, 0, 0, 2031587, 65536, 0, 2031588, 131072, 0, 1703906, 131072, 8, 1769442, 131072, 9, 1834978, 0, 2, 1703907, 196608, 8, 1769443, 196608, 9, 1834979, 65536, 2, 1703908, 131072, 0, 1769444, 131072, 1, 1834980, 131072, 2, 1900514, 0, 0, 1966050, 0, 1, 1900515, 65536, 0, 1966051, 65536, 1, 1900516, 131072, 0, 1966052, 131072, 1, 1376226, 0, 0, 1441762, 0, 1, 1507298, 0, 2, 1376227, 65536, 0, 1441763, 65536, 1, 1507299, 65536, 2, 1376228, 131072, 0, 1441764, 131072, 1, 1507300, 131072, 2, 1572834, 0, 0, 1638370, 0, 1, 1572835, 65536, 0, 1638371, 65536, 1, 1572836, 131072, 0, 1638372, 131072, 1, 1376229, 0, 0, 1441765, 0, 1, 1507301, 0, 2, 1376230, 65536, 0, 1441766, 65536, 1, 1507302, 65536, 2, 1376231, 131072, 0, 1441767, 131072, 1, 1507303, 131072, 2, 1376232, 131072, 8, 1441768, 131072, 9, 1507304, 0, 2, 1376233, 196608, 8, 1441769, 196608, 9, 1507305, 65536, 2, 1376234, 131072, 0, 1441770, 131072, 1, 1507306, 131072, 2, 1376235, 0, 0, 1441771, 0, 1, 1507307, 0, 2, 1376236, 65536, 0, 1441772, 65536, 1, 1507308, 65536, 2, 1376237, 131072, 0, 1441773, 131072, 1, 1507309, 131072, 2, 1376238, 65536, 4, 1441774, 65536, 1, 1507310, 65536, 4, 1376239, 131072, 2, 1441775, 262144, 1, 1507311, 131072, 2, 1376240, 0, 5, 1441776, 0, 6, 1507312, 0, 5, 1376241, 0, 5, 1441777, 0, 6, 1507313, 0, 5, 1376242, 65536, 0, 1441778, 65536, 1, 1507314, 65536, 2, 2031589, 196608, 4, 1966053, 196608, 3, 1900517, 196608, 2, 1834981, 196608, 2, 1769445, 196608, 3, 1638373, 196608, 3, 1703909, 196608, 2, 1572837, 196608, 2, 1572838, 262144, 2, 1572839, 262144, 5, 1572840, 262144, 0, 1572841, 327680, 2, 1572842, 262144, 0, 1572843, 262144, 5, 1572844, 262144, 0, 1572846, 262144, 0, 1572848, 262144, 0, 1572845, 262144, 5, 1572847, 262144, 5, 1572849, 262144, 5, 1376243, 0, 1, 1376244, 65536, 1, 1376245, 131072, 1, 1376246, 196608, 1, 1376247, 131072, 8, 1376248, 196608, 8, 1441779, 0, 1, 1441780, 65536, 1, 1441781, 131072, 1, 1441782, 196608, 1, 1441783, 131072, 9, 1441784, 196608, 9, 1507315, 0, 1, 1507316, 65536, 1, 1507317, 131072, 1, 1507318, 196608, 1, 1507319, 262144, 1, 1507320, 327680, 1, 1376249, 0, 1, 1376250, 65536, 1, 1376251, 131072, 1, 1376252, 196608, 1, 1376253, 262144, 1, 1376254, 327680, 1, 1441785, 0, 1, 1441786, 65536, 1, 1441787, 131072, 1, 1441788, 196608, 1, 1441789, 262144, 1, 1441790, 327680, 1, 1507321, 0, 1, 1507322, 65536, 1, 1507323, 131072, 1, 1507324, 196608, 1, 1507325, 262144, 1, 1507326, 327680, 1, 1376255, 0, 1, 1310720, 65536, 1, 1310721, 131072, 1, 1310722, 196608, 1, 1310723, 262144, 1, 1310724, 327680, 1, 1441791, 0, 1, 1376256, 65536, 1, 1376257, 131072, 1, 1376258, 196608, 1, 1376259, 262144, 1, 1376260, 327680, 1, 1507327, 0, 1, 1441792, 65536, 1, 1441793, 131072, 1, 1441794, 196608, 1, 1441795, 262144, 1, 1441796, 327680, 1, 1310725, 0, 1, 1376261, 0, 1, 1441797, 0, 1, 1572850, 262144, 0, 1572851, 327680, 0, 1572852, 262144, 0, 1572853, 327680, 0, 1572854, 262144, 0, 1572855, 327680, 0, 1572856, 262144, 0, 1572857, 327680, 0, 1572858, 262144, 0, 1572859, 327680, 0, 1572860, 262144, 0, 1572861, 327680, 0, 1572862, 262144, 0, 1572863, 327680, 0, 1507328, 262144, 0, 1507329, 327680, 0, 1507330, 262144, 0, 1507331, 327680, 0, 1507332, 262144, 0, 1507333, 327680, 0, 1900513, 0, 4, 1966049, 0, 4, 2031585, 0, 4, 1310689, 0, 4, 1376225, 0, 4, 1441761, 0, 4, 1507297, 0, 4, 1572833, 0, 4, 1638369, 0, 4, 1703905, 0, 4, 1769441, 0, 4, 1834977, 0, 4, 1310688, 720896, 3, 1376224, 720896, 3, 1441760, 720896, 3, 1507296, 720896, 3, 1572832, 720896, 3, 1638368, 720896, 3, 1703904, 720896, 3, 1769440, 720896, 3, 1834976, 720896, 3, 1900512, 720896, 3, 1966048, 720896, 3, 2031584, 720896, 3, 1245152, 720896, 3, 1245153, 458752, 5, 1179616, 458752, 6, 1245154, 458752, 5, 1245155, 524288, 5, 1245156, 589824, 5, 1245157, 655360, 5, 1245158, 458752, 5, 1245159, 524288, 5, 1245160, 458752, 5, 1245161, 524288, 5, 1245162, 589824, 5, 1245163, 655360, 5, 1245164, 458752, 5, 1245165, 524288, 5, 1245166, 589824, 5, 1245167, 655360, 5, 1245168, 458752, 5, 1245169, 524288, 5, 1245170, 589824, 5, 1245171, 655360, 5, 1245172, 458752, 5, 1245173, 524288, 5, 1245174, 589824, 5, 1245175, 655360, 5, 1245176, 458752, 5, 1245177, 524288, 5, 1245178, 589824, 5, 1179617, 458752, 4, 1179618, 458752, 4, 1179619, 458752, 4, 1179620, 458752, 4, 1179621, 458752, 4, 1179622, 458752, 4, 1179623, 458752, 4, 1179624, 458752, 4, 1179625, 458752, 4, 1179626, 458752, 4, 1179627, 458752, 4, 1179628, 458752, 4, 1179629, 458752, 4, 1179630, 458752, 4, 1179631, 458752, 4, 1179632, 458752, 4, 1179633, 458752, 4, 1179634, 458752, 4, 1179635, 458752, 4, 1179636, 458752, 4, 1179637, 458752, 4, 1179638, 458752, 4, 1179639, 458752, 4, 1179640, 458752, 4, 1179641, 458752, 4, 1179642, 458752, 4, 1310690, 131072, 5, 1310691, 196608, 5, 1310692, 131072, 5, 1310693, 196608, 5, 1310694, 131072, 5, 1310695, 131072, 5, 1310696, 196608, 5, 1310697, 131072, 5, 1310698, 196608, 5, 1310699, 131072, 5, 1310700, 196608, 5, 1310701, 131072, 5, 1310702, 196608, 5, 1310703, 131072, 5, 1310704, 196608, 5, 1310705, 131072, 5, 1310706, 196608, 5, 1310707, 131072, 5, 1310708, 196608, 5, 1310709, 131072, 5, 1310710, 196608, 5, 1310711, 131072, 5, 1310712, 196608, 5, 1310713, 131072, 5, 1310714, 196608, 5, 1310715, 131072, 5, 1310716, 196608, 5, 1310717, 131072, 5, 1310718, 196608, 5, 1310719, 131072, 5, 1245184, 196608, 5, 1245185, 131072, 5, 262115, 589824, 2, 327651, 589824, 2, 393187, 589824, 2, 458723, 589824, 2, 524259, 589824, 2, 589795, 589824, 2, 655331, 589824, 2, 720867, 589824, 2, 786403, 589824, 2, 851939, 589824, 2, 917475, 589824, 2, 983011, 589824, 2, 1048547, 589824, 2, 1114083, 589824, 2, 262116, 589824, 2, 327652, 589824, 2, 393188, 589824, 2, 458724, 589824, 2, 524260, 589824, 2, 589796, 589824, 2, 655332, 589824, 2, 720868, 589824, 2, 786404, 589824, 2, 851940, 589824, 2, 917476, 589824, 2, 983012, 589824, 2, 1048548, 589824, 2, 1114084, 589824, 2, 262117, 589824, 2, 327653, 589824, 2, 393189, 589824, 2, 458725, 589824, 2, 524261, 589824, 2, 589797, 589824, 2, 655333, 589824, 2, 720869, 589824, 2, 786405, 589824, 2, 851941, 589824, 2, 917477, 589824, 2, 983013, 589824, 2, 1048549, 589824, 2, 1114085, 589824, 2, 262118, 589824, 2, 327654, 589824, 2, 393190, 589824, 2, 458726, 589824, 2, 524262, 589824, 2, 589798, 589824, 2, 655334, 589824, 2, 720870, 589824, 2, 786406, 589824, 2, 851942, 589824, 2, 917478, 589824, 2, 983014, 589824, 2, 1048550, 589824, 2, 1114086, 589824, 2, 262119, 589824, 2, 327655, 589824, 2, 393191, 589824, 2, 458727, 589824, 2, 524263, 589824, 2, 589799, 589824, 2, 655335, 589824, 2, 720871, 589824, 2, 786407, 589824, 2, 851943, 589824, 2, 917479, 589824, 2, 983015, 589824, 2, 1048551, 589824, 2, 1114087, 589824, 2, 262120, 589824, 2, 327656, 589824, 2, 393192, 589824, 2, 458728, 589824, 2, 524264, 589824, 2, 589800, 589824, 2, 655336, 589824, 2, 720872, 589824, 2, 786408, 589824, 2, 851944, 589824, 2, 917480, 589824, 2, 983016, 589824, 2, 1048552, 589824, 2, 1114088, 589824, 2, 262121, 589824, 2, 327657, 589824, 2, 393193, 589824, 2, 458729, 589824, 2, 524265, 589824, 2, 589801, 589824, 2, 655337, 589824, 2, 720873, 589824, 2, 786409, 589824, 2, 851945, 589824, 2, 917481, 589824, 2, 983017, 589824, 2, 1048553, 589824, 2, 1114089, 589824, 2, 262122, 589824, 2, 327658, 589824, 2, 393194, 589824, 2, 458730, 589824, 2, 524266, 589824, 2, 589802, 589824, 2, 655338, 589824, 2, 720874, 589824, 2, 786410, 589824, 2, 851946, 589824, 2, 917482, 589824, 2, 983018, 589824, 2, 1048554, 589824, 2, 1114090, 589824, 2, 262123, 589824, 2, 327659, 589824, 2, 393195, 589824, 2, 458731, 589824, 2, 524267, 589824, 2, 589803, 589824, 2, 655339, 589824, 2, 720875, 589824, 2, 786411, 589824, 2, 851947, 589824, 2, 917483, 589824, 2, 983019, 589824, 2, 1048555, 589824, 2, 1114091, 589824, 2, 262124, 589824, 2, 327660, 589824, 2, 393196, 589824, 2, 458732, 589824, 2, 524268, 589824, 2, 589804, 589824, 2, 655340, 589824, 2, 720876, 589824, 2, 786412, 589824, 2, 851948, 589824, 2, 917484, 589824, 2, 983020, 589824, 2, 1048556, 589824, 2, 1114092, 589824, 2, 262125, 589824, 2, 327661, 589824, 2, 393197, 589824, 2, 458733, 589824, 2, 524269, 589824, 2, 589805, 589824, 2, 655341, 589824, 2, 720877, 589824, 2, 786413, 589824, 2, 851949, 589824, 2, 917485, 589824, 2, 983021, 589824, 2, 1048557, 589824, 2, 1114093, 589824, 2, 262126, 589824, 2, 327662, 589824, 2, 393198, 589824, 2, 458734, 589824, 2, 524270, 589824, 2, 589806, 589824, 2, 655342, 589824, 2, 720878, 589824, 2, 786414, 589824, 2, 851950, 589824, 2, 917486, 589824, 2, 983022, 589824, 2, 1048558, 589824, 2, 1114094, 589824, 2, 262127, 589824, 2, 327663, 589824, 2, 393199, 589824, 2, 458735, 589824, 2, 524271, 589824, 2, 589807, 589824, 2, 655343, 589824, 2, 720879, 589824, 2, 786415, 589824, 2, 851951, 589824, 2, 917487, 589824, 2, 983023, 589824, 2, 1048559, 589824, 2, 1114095, 589824, 2, 262128, 589824, 2, 327664, 589824, 2, 393200, 589824, 2, 458736, 589824, 2, 524272, 589824, 2, 589808, 589824, 2, 655344, 589824, 2, 720880, 589824, 2, 786416, 589824, 2, 851952, 589824, 2, 917488, 589824, 2, 983024, 589824, 2, 1048560, 589824, 2, 1114096, 589824, 2, 262129, 589824, 2, 327665, 589824, 2, 393201, 589824, 2, 458737, 589824, 2, 524273, 589824, 2, 589809, 589824, 2, 655345, 589824, 2, 720881, 589824, 2, 786417, 589824, 2, 851953, 589824, 2, 917489, 589824, 2, 983025, 589824, 2, 1048561, 589824, 2, 1114097, 589824, 2, 262130, 589824, 2, 327666, 589824, 2, 393202, 589824, 2, 458738, 589824, 2, 524274, 589824, 2, 589810, 589824, 2, 655346, 589824, 2, 720882, 589824, 2, 786418, 589824, 2, 851954, 589824, 2, 917490, 589824, 2, 983026, 589824, 2, 1048562, 589824, 2, 1114098, 589824, 2, 262131, 589824, 2, 327667, 589824, 2, 393203, 589824, 2, 458739, 589824, 2, 524275, 589824, 2, 589811, 589824, 2, 655347, 589824, 2, 720883, 589824, 2, 786419, 589824, 2, 851955, 589824, 2, 917491, 589824, 2, 983027, 589824, 2, 1048563, 589824, 2, 1114099, 589824, 2, 262132, 589824, 2, 327668, 589824, 2, 393204, 589824, 2, 458740, 589824, 2, 524276, 589824, 2, 589812, 589824, 2, 655348, 589824, 2, 720884, 589824, 2, 786420, 589824, 2, 851956, 589824, 2, 917492, 589824, 2, 983028, 589824, 2, 1048564, 589824, 2, 1114100, 589824, 2, 262133, 589824, 2, 327669, 589824, 2, 393205, 589824, 2, 458741, 589824, 2, 524277, 589824, 2, 589813, 589824, 2, 655349, 589824, 2, 720885, 589824, 2, 786421, 589824, 2, 851957, 589824, 2, 917493, 589824, 2, 983029, 589824, 2, 1048565, 589824, 2, 1114101, 589824, 2, 262134, 589824, 2, 327670, 589824, 2, 393206, 589824, 2, 458742, 589824, 2, 524278, 589824, 2, 589814, 589824, 2, 655350, 589824, 2, 720886, 589824, 2, 786422, 589824, 2, 851958, 589824, 2, 917494, 589824, 2, 983030, 589824, 2, 1048566, 589824, 2, 1114102, 589824, 2, 262135, 589824, 2, 327671, 589824, 2, 393207, 589824, 2, 458743, 589824, 2, 524279, 589824, 2, 589815, 589824, 2, 655351, 589824, 2, 720887, 589824, 2, 786423, 589824, 2, 851959, 589824, 2, 917495, 589824, 2, 983031, 589824, 2, 1048567, 589824, 2, 1114103, 589824, 2, 262136, 589824, 2, 327672, 589824, 2, 393208, 589824, 2, 458744, 589824, 2, 524280, 589824, 2, 589816, 589824, 2, 655352, 589824, 2, 720888, 589824, 2, 786424, 589824, 2, 851960, 589824, 2, 917496, 589824, 2, 983032, 589824, 2, 1048568, 589824, 2, 1114104, 589824, 2, 262137, 589824, 2, 327673, 589824, 2, 393209, 589824, 2, 458745, 589824, 2, 524281, 589824, 2, 589817, 589824, 2, 655353, 589824, 2, 720889, 589824, 2, 786425, 589824, 2, 851961, 589824, 2, 917497, 589824, 2, 983033, 589824, 2, 1048569, 589824, 2, 1114105, 589824, 2, 262138, 589824, 2, 327674, 589824, 2, 393210, 589824, 2, 458746, 589824, 2, 524282, 589824, 2, 589818, 589824, 2, 655354, 589824, 2, 720890, 589824, 2, 786426, 589824, 2, 851962, 589824, 2, 917498, 589824, 2, 983034, 589824, 2, 1048570, 589824, 2, 1114106, 589824, 2, 262139, 589824, 2, 327675, 589824, 2, 393211, 589824, 2, 458747, 589824, 2, 524283, 589824, 2, 589819, 589824, 2, 655355, 589824, 2, 720891, 589824, 2, 786427, 589824, 2, 851963, 589824, 2, 917499, 589824, 2, 983035, 589824, 2, 1048571, 589824, 2, 1114107, 589824, 2, 262140, 589824, 2, 327676, 589824, 2, 393212, 589824, 2, 458748, 589824, 2, 524284, 589824, 2, 589820, 589824, 2, 655356, 589824, 2, 720892, 589824, 2, 786428, 589824, 2, 851964, 589824, 2, 917500, 589824, 2, 983036, 589824, 2, 1048572, 589824, 2, 1114108, 589824, 2)
+
+[node name="shadows" type="TileMap" parent="Map"]
+tile_set = SubResource("TileSet_1mvbn")
+format = 2
+layer_0/tile_data = PackedInt32Array(18219121, 3, 0, 18284659, 3, 0, 20840553, 3, 0, 20906090, 3, 0, 20906091, 3, 0, 20971627, 3, 0, 20971628, 3, 0, 20840560, 3, 0, 19791916, 3, 0, 17694771, 3, 0, 19267669, 3, 0, 19071158, 17, 0, 19136694, 17, 0, 19202230, 17, 0, 19267766, 17, 0, 19333302, 17, 0, 19398838, 17, 0, 19464374, 17, 0, 19529910, 17, 0, 19529911, 17, 0, 19529912, 17, 0, 19529913, 17, 0, 19529914, 17, 0, 19529915, 17, 0, 19529916, 17, 0, 19529917, 17, 0, 19529918, 17, 0, 19529919, 17, 0, 19529920, 17, 0, 19529921, 17, 0, 19464385, 17, 0, 19398849, 17, 0, 19333313, 17, 0, 19267777, 17, 0, 19202241, 17, 0, 19136705, 17, 0, 19071169, 17, 0, 19005633, 17, 0, 19071157, 17, 0, 19136693, 17, 0, 19202229, 17, 0, 19267765, 17, 0, 19333301, 17, 0, 19398837, 17, 0, 19464373, 17, 0, 19529909, 17, 0, 19595445, 17, 0, 19595446, 17, 0, 19595447, 17, 0, 19595448, 17, 0, 19595449, 17, 0, 19595450, 17, 0, 19595451, 17, 0, 19595452, 17, 0, 19595453, 17, 0, 19595454, 17, 0, 19595455, 17, 0, 19595456, 17, 0, 19595457, 17, 0, 19595458, 17, 0, 19529922, 17, 0, 19464386, 17, 0, 19398850, 17, 0, 19333314, 17, 0, 19267778, 17, 0, 19202242, 17, 0, 19136706, 17, 0, 19071170, 17, 0, 19005634, 17, 0, 18546821, 17, 0, 18612357, 17, 0, 18677893, 17, 0, 18743429, 17, 0, 18808965, 17, 0, 18874502, 17, 0, 18940038, 17, 0, 19005574, 17, 0, 19071110, 17, 0, 19136647, 17, 0, 19136646, 17, 0, 19136648, 17, 0, 19202184, 17, 0, 19202185, 17, 0, 19202186, 17, 0, 19202187, 17, 0, 19136651, 17, 0, 19136652, 17, 0, 19136653, 17, 0, 19136654, 17, 0, 19136655, 17, 0, 19136656, 17, 0, 19136658, 17, 0, 19071122, 17, 0, 19005586, 17, 0, 18940050, 17, 0, 18874514, 17, 0, 18808978, 17, 0, 18743442, 17, 0, 18677907, 17, 0, 18612371, 17, 0, 18546835, 17, 0, 18481299, 17, 0, 18415763, 17, 0, 18350227, 17, 0, 20775047, 17, 0, 20709512, 17, 0, 20775049, 17, 0, 20775050, 17, 0, 20775051, 17, 0, 20775052, 17, 0, 20775053, 17, 0, 20775054, 17, 0, 20775055, 17, 0, 20775056, 17, 0, 20775057, 17, 0, 20775058, 17, 0, 20709522, 17, 0, 20643986, 17, 0, 20578450, 17, 0, 20512914, 17, 0, 20447378, 17, 0, 20381842, 17, 0, 20316306, 17, 0, 20250770, 17, 0, 20185235, 17, 0, 20119699, 17, 0, 20054163, 17, 0, 19988627, 17, 0, 19923091, 17, 0, 19857555, 17, 0, 19792019, 17, 0, 19726483, 17, 0, 19857540, 17, 0, 19923076, 17, 0, 19988612, 17, 0, 20054148, 17, 0, 20119685, 17, 0, 20185221, 17, 0, 20250757, 17, 0, 20316293, 17, 0, 20381829, 17, 0, 20447365, 17, 0, 20512901, 17, 0, 20578438, 17, 0, 20643974, 17, 0, 20709510, 17, 0, 20775046, 17, 0, 20054086, 17, 0, 20119622, 17, 0, 20185158, 17, 0, 20250694, 17, 0, 20316230, 17, 0, 20381766, 17, 0, 20447302, 17, 0, 20512838, 17, 0, 20578374, 17, 0, 20054085, 17, 0, 20119621, 17, 0, 20185157, 17, 0, 20250693, 17, 0, 20316229, 17, 0, 20381765, 17, 0, 20447301, 17, 0, 20512837, 17, 0, 20578373, 17, 0, 20643909, 17, 0, 20643910, 17, 0, 20643911, 17, 0, 20643912, 17, 0, 20643913, 17, 0, 20643914, 17, 0, 20643915, 17, 0, 20643916, 17, 0, 20643917, 17, 0, 20643918, 17, 0, 20643919, 17, 0, 20643920, 17, 0, 20643921, 17, 0, 20643922, 17, 0, 20578386, 17, 0, 20512850, 17, 0, 20447314, 17, 0, 20381778, 17, 0, 20316242, 17, 0, 20250706, 17, 0, 20185170, 17, 0, 20119634, 17, 0, 20054098, 17, 0, 19988562, 17, 0, 15925283, 3, 0, 16515148, 3, 0, 14417971, 3, 0, 14352435, 3, 0, 12779587, 3, 0, 13369508, 3, 0, 14942371, 3, 0, 8126522, 3, 0, 8126523, 3, 0, 6488229, 3, 0, 7012540, 3, 0, 6095028, 3, 0, 6946853, 3, 0, 12845093, 3, 0, 16646324, 3, 0, 17498148, 3, 0)
+
+[node name="Houses" type="TileMap" parent="Map"]
+tile_set = SubResource("TileSet_7k3eq")
+format = 2
+layer_0/tile_data = PackedInt32Array(2490385, 38, 0, 2293777, 38, 0, 2293783, 40, 0, 2424841, 40, 0)
+
+[node name="Trees" type="TileMap" parent="Map"]
+tile_set = SubResource("TileSet_qbt5y")
+format = 2
+layer_0/tile_data = PackedInt32Array(2490381, 0, 0, 2293770, 0, 0, 2162702, 0, 0, 2359301, 0, 0, 2097158, 0, 0, 1703942, 2, 0, 1769492, 2, 0, 2097156, 2, 0, 1966089, 2, 0, 1572884, 2, 0, 1507336, 2, 0, 1900548, 2, 0, 2228236, 1, 0, 2031639, 1, 0, 1966102, 1, 0, 1769480, 1, 0, 1507332, 1, 0, 327683, 2, 0, 524293, 2, 0, 524290, 2, 0, 458759, 2, 0, 262146, 2, 0, 393217, 2, 0, 262156, 2, 0, 524308, 2, 0, 524309, 2, 0, 589841, 2, 0, 262162, 2, 0, 262165, 2, 0, 393233, 2, 0, 327690, 2, 0, 196613, 2, 0, 327684, 2, 0, 720897, 2, 0, 655364, 2, 0, 786436, 2, 0, 720916, 2, 0, 786455, 2, 0, 327703, 2, 0, 131093, 2, 0, 131085, 2, 0, 262159, 2, 0, 327695, 2, 0, 131083, 2, 0, 196618, 2, 0, 262152, 2, 0, 196611, 2, 0, 458767, 2, 0, 327693, 2, 0, 458761, 2, 0, 327686, 2, 0, 458755, 2, 0, 458757, 1, 0, 393224, 1, 0, 393229, 1, 0, 458770, 1, 0, 458772, 1, 0, 458773, 1, 0, 655362, 1, 0, 720900, 1, 0, 720899, 1, 0, 655361, 1, 0, 262145, 1, 0, 262150, 1, 0, 196616, 1, 0, 131086, 1, 0, 196624, 1, 0, 458763, 1, 0, 589838, 1, 0, 917511, 1, 0, 655382, 1, 0, 131077, 1, 0, 65538, 1, 0, 65543, 1, 0, 65553, 1, 0, 131092, 1, 0, 327700, 1, 0, 131090, 1, 0)
+
+[node name="grass" type="TileMap" parent="Map"]
+tile_set = SubResource("TileSet_g1mmy")
+format = 2
+layer_0/tile_data = PackedInt32Array(1769488, 9, 0, 1900551, 9, 0, 1638404, 8, 0, 2097161, 8, 0, 2097162, 8, 0, 1900564, 8, 0, 1835017, 6, 0, 1638413, 6, 0, 1769481, 6, 0, 1835018, 5, 0, 1900554, 6, 0, 1900553, 6, 0, 1572884, 6, 0, 1638420, 6, 0, 1703940, 5, 0, 1769476, 6, 0, 1835012, 6, 0, 1835014, 6, 0, 1769478, 6, 0, 1703943, 6, 0, 1638407, 6, 0, 1638408, 5, 0, 1900561, 6, 0, 1966097, 6, 0, 2031633, 6, 0, 1900556, 6, 0, 1966092, 6, 0, 1507338, 6, 0, 1572874, 6, 0, 1638410, 5, 0, 1638409, 5, 0, 1441798, 6, 0, 1507334, 5, 0, 1572870, 6, 0, 1507345, 5, 0, 1572881, 5, 0, 1638418, 5, 0, 1703951, 5, 0, 1769487, 5, 0, 1835023, 5, 0, 1703946, 5, 0, 1769482, 5, 0, 1835019, 5, 0, 1638411, 5, 0, 1703948, 5, 0, 1769484, 5, 0, 1835025, 9, 0, 1835024, 9, 0, 1703954, 9, 0, 1769490, 9, 0, 1638417, 9, 0, 1638422, 9, 0, 786443, 4, 0, 851983, 4, 0, 917507, 5, 0, 917508, 5, 0, 655367, 8, 0, 655370, 5, 0, 720906, 5, 0, 917523, 5, 0, 983058, 5, 0, 983041, 5, 0, 851969, 5, 0, 983043, 9, 0, 786438, 5, 0, 917513, 5, 0, 983049, 5, 0, 851978, 5, 0, 720904, 5, 0, 720911, 8, 0, 851985, 8, 0, 589831, 8, 0, 983051, 9, 0, 917525, 9, 0, 851988, 9, 0, 917509, 9, 0, 983044, 9, 0, 851970, 9, 0, 589833, 9, 0)
+
+[node name="Road" type="TileMap" parent="Map"]
+tile_set = SubResource("TileSet_2f2ar")
+format = 2
+layer_0/tile_data = PackedInt32Array(2555920, 1179648, 18, 2490384, 1179648, 17, 2424848, 1179648, 16, 2359312, 1179648, 15, 2293776, 1179648, 18, 2228240, 1179648, 17, 2162704, 1179648, 14, 2162705, 1245184, 14, 2162706, 1245184, 14, 2162707, 1245184, 14, 2162708, 1310720, 14, 2162709, 1376256, 14, 2162710, 1441792, 14, 2228244, 524288, 18, 2293780, 655360, 18, 2228245, 589824, 18, 2293781, 589824, 19, 2359316, 655360, 19, 2424852, 524288, 19, 2359317, 589824, 18, 2424853, 589824, 19, 2490388, 655360, 18, 2555924, 655360, 19, 2490389, 589824, 18, 2555925, 589824, 18, 2621460, 524288, 19, 2621461, 589824, 19, 2293779, 655360, 16, 2359315, 655360, 17, 2490387, 655360, 16, 2555923, 655360, 17, 2162711, 1245184, 14, 2162712, 1245184, 14, 2621456, 1179648, 15, 1441805, 1441792, 20, 1441806, 1507328, 20, 1048589, 1179648, 21, 1114125, 1310720, 21, 1048590, 1245184, 21, 1114126, 1376256, 21, 1179661, 1310720, 20, 1245197, 1310720, 21, 1179662, 1376256, 20, 1245198, 1376256, 21, 1310733, 1310720, 20, 1376269, 1310720, 21, 1310734, 1376256, 20, 1376270, 1376256, 21, 983053, 1179648, 20, 983054, 1245184, 20, 1900564, 786432, 16, 1966100, 655360, 19, 1900565, 983040, 18, 1966101, 589824, 19, 2031636, 524288, 18, 2097172, 524288, 19, 2031637, 589824, 18, 2097173, 589824, 19, 1900560, 655360, 16, 1966096, 655360, 17, 1900561, 720896, 16, 1966097, 720896, 17, 1900562, 655360, 16, 1966098, 655360, 17, 1900563, 720896, 16, 1966099, 720896, 17, 1507341, 524288, 18, 1572877, 524288, 19, 1507342, 589824, 18, 1572878, 589824, 19, 1638413, 524288, 18, 1703949, 524288, 19, 1638414, 589824, 18, 1703950, 589824, 19, 1769485, 524288, 18, 1835021, 524288, 19, 1769486, 589824, 18, 1835022, 589824, 19, 1900557, 524288, 18, 1900558, 983040, 16, 1966094, 983040, 17, 1900559, 720896, 16, 1966095, 720896, 17, 1966093, 917504, 19)
+
+[node name="ui" type="TileMap" parent="Map"]
+tile_set = SubResource("TileSet_pgycq")
+format = 2
+layer_0/tile_data = PackedInt32Array(2293780, 4, 0, 2162708, 5, 0, 2097172, 5, 0, 2031636, 5, 0, 1966100, 5, 0, 1966099, 5, 0, 1966098, 5, 0, 1966097, 5, 0, 1966096, 5, 0, 1966095, 5, 0, 1966094, 5, 0, 1966093, 5, 0, 1900557, 5, 0, 1835021, 5, 0, 1769485, 5, 0, 1703949, 5, 0, 1638413, 5, 0, 1572877, 5, 0, 1507341, 5, 0, 1441805, 5, 0, 1376269, 5, 0, 1310733, 5, 0, 1245197, 5, 0, 1179661, 5, 0, 1114125, 5, 0, 1048589, 5, 0, 983053, 5, 0, 917517, 5, 0, 851981, 5, 0, 720909, 5, 0, 786445, 5, 0, 589837, 4, 0, 458765, 5, 0, 393229, 5, 0, 327693, 5, 0, 262157, 5, 0, 196621, 5, 0, 131085, 5, 0, 65549, 5, 0, 13, 5, 0)
+
+[node name="TileMap" type="TileMap" parent="Map"]
+tile_set = SubResource("TileSet_jnq8j")
+format = 2
+layer_0/modulate = Color(1, 1, 1, 0.682353)
+layer_0/tile_data = PackedInt32Array(65536, 131090, 2, 131072, 131090, 3, 65537, 196626, 2, 131073, 196626, 3, 196608, 131090, 2, 262144, 131090, 3, 196609, 196626, 2, 262145, 196626, 3, 327680, 131090, 2, 393216, 131090, 3, 327681, 196626, 2, 393217, 131090, 3, 65538, 131090, 2, 131074, 131090, 3, 65539, 196626, 2, 131075, 196626, 3, 196610, 131090, 2, 262146, 131090, 3, 196611, 196626, 2, 262147, 196626, 3, 327682, 131090, 2, 393218, 131090, 3, 327683, 196626, 2, 393219, 196626, 3, 65540, 131090, 2, 131076, 131090, 3, 65541, 196626, 2, 131077, 196626, 3, 196612, 131090, 2, 262148, 131090, 3, 196613, 196626, 2, 262149, 196626, 3, 327684, 131090, 2, 393220, 131090, 3, 327685, 196626, 2, 393221, 131090, 3, 65542, 131090, 2, 131078, 131090, 3, 65543, 196626, 2, 131079, 196626, 3, 196614, 131090, 2, 262150, 131090, 3, 196615, 196626, 2, 262151, 196626, 3, 327686, 131090, 2, 393222, 131090, 3, 327687, 196626, 2, 393223, 196626, 3, 65544, 131090, 2, 131080, 131090, 3, 65545, 196626, 2, 131081, 196626, 3, 196616, 131090, 2, 262152, 131090, 3, 196617, 196626, 2, 262153, 196626, 3, 327688, 131090, 2, 393224, 131090, 3, 327689, 196626, 2, 393225, 196626, 3, 65546, 131090, 2, 131082, 131090, 3, 65547, 196626, 2, 131083, 196626, 3, 196618, 131090, 2, 262154, 131090, 3, 196619, 196626, 2, 262155, 196626, 3, 327690, 131090, 2, 393226, 131090, 3, 327691, 196626, 2, 393227, 196626, 3, 65548, 131090, 2, 131084, 131090, 3, 65549, 196626, 2, 131085, 196626, 3, 196620, 131090, 2, 262156, 131090, 3, 196621, 196626, 2, 262157, 196626, 3, 327692, 131090, 2, 393228, 131090, 3, 327693, 196626, 2, 393229, 196626, 3, 65550, 131090, 2, 131086, 131090, 3, 65551, 196626, 2, 131087, 196626, 3, 196622, 131090, 2, 262158, 131090, 3, 196623, 196626, 2, 262159, 196626, 3, 327694, 131090, 2, 393230, 131090, 3, 327695, 196626, 2, 393231, 196626, 3, 65552, 131090, 2, 131088, 131090, 3, 65553, 196626, 2, 131089, 196626, 3, 196624, 131090, 2, 262160, 131090, 3, 196625, 196626, 2, 262161, 196626, 3, 327696, 131090, 2, 393232, 131090, 3, 327697, 196626, 2, 393233, 196626, 3, 65554, 131090, 2, 131090, 131090, 3, 65555, 196626, 2, 131091, 196626, 3, 196626, 131090, 2, 262162, 131090, 3, 196627, 196626, 2, 262163, 196626, 3, 327698, 131090, 2, 393234, 131090, 3, 327699, 196626, 2, 393235, 196626, 3, 65556, 131090, 2, 131092, 131090, 3, 65557, 196626, 2, 131093, 196626, 3, 196628, 131090, 2, 262164, 131090, 3, 196629, 196626, 2, 262165, 196626, 3, 327700, 131090, 2, 393236, 131090, 3, 327701, 196626, 2, 393237, 196626, 3, 65558, 131090, 2, 131094, 131090, 3, 65559, 196626, 2, 131095, 196626, 3, 196630, 131090, 2, 262166, 131090, 3, 196631, 196626, 2, 262167, 196626, 3, 327702, 131090, 2, 393238, 131090, 3, 327703, 196626, 2, 393239, 196626, 3, 65560, 131090, 2, 131096, 131090, 3, 65561, 196626, 2, 131097, 196626, 3, 196632, 131090, 2, 262168, 131090, 3, 196633, 196626, 2, 262169, 196626, 3, 327704, 131090, 2, 393240, 131090, 3, 327705, 196626, 2, 393241, 196626, 3, 458760, 131090, 6, 458759, 65554, 6, 458758, 18, 6, 524294, 18, 7, 589830, 262162, 4, 589829, 196626, 4, 589828, 18, 6, 655365, 65554, 7, 655364, 18, 7, 720900, 18, 7, 720899, 262162, 1610612740, 720896, 196626, 4, 720897, 196626, 4, 720898, 196626, 4, 458752, 131090, 3, 524288, 131090, 3, 589824, 131090, 3, 655360, 131090, 3, 458753, 131090, 3, 524289, 131090, 3, 589825, 131090, 3, 655361, 131090, 3, 458755, 131090, 3, 524291, 131090, 3, 589827, 131090, 3, 655363, 131090, 3, 458754, 131090, 3, 524290, 131090, 3, 589826, 131090, 3, 655362, 131090, 3, 458756, 131090, 3, 524292, 131090, 3, 458757, 131090, 3, 524293, 131090, 3, 458761, 131090, 4, 458762, 196626, 4, 458763, 131090, 4, 458764, 196626, 4, 458765, 131090, 4, 458766, 196626, 4, 458767, 131090, 4, 458768, 196626, 4, 458769, 65554, 4, 458770, 196626, 6, 524306, 196626, 7, 589842, 196626, 7, 589843, 65554, 4, 589844, 131090, 4, 589845, 131090, 4, 589846, 131090, 4, 786432, 131090, 5, 786433, 196626, 5, 786434, 131090, 5, 786435, 196626, 5, 786436, 262162, 5, 786437, 327698, 5, 720901, 327698, 4, 655366, 262162, 5, 655367, 327698, 4, 589831, 327698, 3, 524295, 327698, 5, 524296, 131090, 5, 524297, 196626, 5, 524298, 131090, 5, 524299, 196626, 5, 524300, 131090, 5, 524301, 196626, 5, 524302, 131090, 5, 524303, 196626, 5, 524304, 131090, 5, 524305, 18, 5, 589841, 18, 3, 655377, 18, 5, 655378, 131090, 5, 655379, 196626, 5, 655380, 131090, 5, 655381, 18, 4, 655382, 131090, 4, 458771, 131090, 2, 524307, 131090, 3, 458772, 131090, 2, 524308, 131090, 3, 458773, 131090, 2, 524309, 131090, 3, 458774, 131090, 2, 524310, 131090, 3, 458775, 131090, 2, 524311, 131090, 3)
+
+[node name="1" type="Label" parent="Map"]
+offset_left = 206.667
+offset_top = 138.667
+offset_right = 224.667
+offset_bottom = 168.667
+theme_override_colors/font_color = Color(0.637843, 0.637843, 0.637843, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 24
+text = "1"
+
+[node name="world_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("62_bcgoe")
+volume_db = -10.0
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(481, 802)
+scale = Vector2(4, 4)
+curve = SubResource("Curve2D_rqmlb")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(1, 6.5)
+rotation = -1.57893
+rotates = false
+script = ExtResource("64_m5era")
+
+[node name="Player" type="Node2D" parent="Path2D/PathFollow2D"]
+position = Vector2(6.50792, -0.947113)
+rotation = 1.57893
+script = ExtResource("65_tr6h5")
+metadata/_edit_group_ = true
+
+[node name="idle" parent="Path2D/PathFollow2D/Player" instance=ExtResource("66_52al8")]
+
+[node name="run" parent="Path2D/PathFollow2D/Player" instance=ExtResource("67_bx055")]
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Player/Area2D"]
+position = Vector2(0.499992, 5.75)
+shape = SubResource("CircleShape2D_iofo1")
+
+[node name="Play" type="TextureButton" parent="Path2D/PathFollow2D/Player"]
+visible = false
+custom_minimum_size = Vector2(195, 280)
+offset_left = -23.5
+offset_top = -15.0
+offset_right = 171.5
+offset_bottom = 265.0
+scale = Vector2(0.07, 0.07)
+texture_normal = ExtResource("70_yrxdn")
+script = ExtResource("71_cwiai")
+
+[node name="card" type="Sprite2D" parent="Path2D/PathFollow2D/Player/Play"]
+visible = false
+position = Vector2(99.9999, 142.857)
+texture = ExtResource("72_uqvqf")
+hframes = 9
+frame = 1
+
+[node name="car_play_anim" type="AnimationPlayer" parent="Path2D/PathFollow2D/Player/Play"]
+root_node = NodePath("../../../../..")
+libraries = {
+"": SubResource("AnimationLibrary_0g41c")
+}
+autoplay = "idle"
+
+[node name="click" type="AudioStreamPlayer2D" parent="Path2D/PathFollow2D/Player/Play"]
+stream = ExtResource("73_l6key")
+
+[node name="level" type="Node2D" parent="."]
+position = Vector2(317, 200)
+script = ExtResource("67_8iajp")
+level = 1
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="level"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level/Area2D"]
+shape = SubResource("CircleShape2D_338cl")
+
+[node name="level2" type="Node2D" parent="."]
+position = Vector2(483, 823)
+script = ExtResource("67_8iajp")
+destination = 0.0
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="level2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level2/Area2D"]
+shape = SubResource("CircleShape2D_338cl")
+
+[node name="Transisi" type="CanvasLayer" parent="."]
+layer = 11
+visible = false
+
+[node name="Transisi" parent="Transisi" instance=ExtResource("75_u4ewb")]
+
+[node name="Book" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+script = ExtResource("74_6kga6")
+
+[node name="CenterContainer" type="CenterContainer" parent="Book"]
+offset_right = 1136.0
+offset_bottom = 2015.0
+scale = Vector2(0.477, 0.477)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Book/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Book/CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="Book/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_cbjvn")
+text = "Close Book
+"
+
+[node name="description" type="PanelContainer" parent="Book/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(832, 250)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1y35x")
+
+[node name="MarginContainer" type="MarginContainer" parent="Book/CenterContainer/VBoxContainer/description"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="desc" type="RichTextLabel" parent="Book/CenterContainer/VBoxContainer/description/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("61_kj0bo")
+theme_override_font_sizes/normal_font_size = 32
+text = "Deskripsi Skill"
+
+[node name="PanelContainer" type="PanelContainer" parent="Book/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ukdwg")
+
+[node name="MarginContainer" type="MarginContainer" parent="Book/CenterContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 4
+
+[node name="skill_book" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+description = "Heal 1: Meregenerasi Health Point Aksa Sebesar 5 Point"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book2" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "Defense"
+number_need = "13"
+description = "Defense 1: Memberikan Defense Tambahan ke Aksa Selama 3 Round"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 183.0
+offset_right = 180.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book2"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book3" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book3"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book3"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book3"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book4" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book4"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book4"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book4"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book5" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book5"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book5"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book5"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book6" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book6"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book6"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book6"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book7" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book7"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book7"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book7"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book8" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book8"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book8"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book8"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book9" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book9"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book9"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book9"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book10" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book10"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book10"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book10"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book11" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book11"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book11"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book11"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="skill_book12" type="TextureButton" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("74_yl4en")
+script = ExtResource("75_ljc8u")
+skill_name = "?"
+number_need = "?"
+description = "?: Coming Soon"
+
+[node name="skillName" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book12"]
+layout_mode = 0
+offset_left = 16.3732
+offset_top = 183.354
+offset_right = 180.373
+offset_bottom = 244.354
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+text = "Heal 1"
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book12"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 111.0
+offset_right = 178.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.419608, 0.231373, 0.32549, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "11"
+horizontal_alignment = 1
+
+[node name="clik" type="AudioStreamPlayer" parent="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book12"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="Button" type="Button" parent="Book/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_osk31")
+text = "Halman Selanjutnya"
+
+[node name="clik" type="AudioStreamPlayer" parent="Book"]
+stream = ExtResource("73_l6key")
+volume_db = -15.0
+
+[node name="Menu" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+script = ExtResource("77_w7m1x")
+
+[node name="PanelContainer" type="PanelContainer" parent="Menu"]
+offset_right = 547.0
+offset_bottom = 965.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="Menu/PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_aygrr")
+text = "Resume"
+
+[node name="Button2" type="Button" parent="Menu/PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_aygrr")
+text = "Main Menu"
+
+[node name="upgrade" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+script = ExtResource("78_bkvly")
+
+[node name="CenterContainer" type="CenterContainer" parent="upgrade"]
+offset_left = 1.0
+offset_top = -6.0
+offset_right = 771.0
+offset_bottom = 1371.0
+scale = Vector2(0.7, 0.7)
+
+[node name="PanelContainer" type="PanelContainer" parent="upgrade/CenterContainer"]
+custom_minimum_size = Vector2(576, 0)
+layout_direction = 2
+layout_mode = 2
+tooltip_text = "gaklkalgkag"
+theme_override_styles/panel = SubResource("StyleBoxFlat_q3kh3")
+
+[node name="MarginContainer" type="MarginContainer" parent="upgrade/CenterContainer/PanelContainer"]
+custom_minimum_size = Vector2(576, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Control" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+texture = ExtResource("78_ovp5j")
+
+[node name="pengalaman" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="hp" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("79_pdxkp")
+
+[node name="unit" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("80_l54di")
+
+[node name="need" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="tambah_hp" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("81_51272")
+icon = ExtResource("81_e0j7r")
+
+[node name="attack" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("82_84aua")
+
+[node name="unit" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control3" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("80_l54di")
+
+[node name="need" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control4" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="tambah_attack" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("81_51272")
+icon = ExtResource("81_e0j7r")
+
+[node name="deffense" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("83_wuj16")
+
+[node name="unit" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control5" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("80_l54di")
+
+[node name="need" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control6" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="tambah_defense" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("81_51272")
+icon = ExtResource("81_e0j7r")
+
+[node name="inti" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("78_86h5x")
+
+[node name="unit" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control7" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("80_l54di")
+
+[node name="need" type="Label" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control8" type="Control" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("81_51272")
+icon = ExtResource("81_e0j7r")
+
+[node name="Simpan" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("81_51272")
+text = "SIMPAN"
+
+[node name="Batal" type="Button" parent="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_j1js5")
+text = "BATAL"
+
+[node name="MenuWorld" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("87_bvkyi")
+
+[node name="menu" type="HBoxContainer" parent="MenuWorld"]
+offset_left = 3.0
+offset_top = 869.0
+offset_right = 546.0
+offset_bottom = 941.0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="setting" type="Button" parent="MenuWorld/menu"]
+layout_mode = 2
+icon = ExtResource("87_3vfuv")
+
+[node name="upgrade" type="Button" parent="MenuWorld/menu"]
+layout_mode = 2
+icon = ExtResource("78_ovp5j")
+
+[node name="book" type="Button" parent="MenuWorld/menu"]
+layout_mode = 2
+icon = ExtResource("88_cskl6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 537.0
+offset_bottom = 84.0
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_yvjf4")
+text = "NEXT"
+
+[node name="perpisahan" type="CanvasLayer" parent="."]
+script = ExtResource("90_u5nng")
+
+[node name="PanelContainer" type="PanelContainer" parent="perpisahan"]
+offset_right = 538.0
+offset_bottom = 194.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rt4n8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="perpisahan/PanelContainer"]
+layout_mode = 2
+
+[node name="avatar" type="TextureRect" parent="perpisahan/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(194, 0)
+layout_mode = 2
+texture = ExtResource("90_31yfd")
+
+[node name="MarginContainer" type="MarginContainer" parent="perpisahan/PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="perpisahan/PanelContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="nama" type="Label" parent="perpisahan/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+theme_override_font_sizes/font_size = 24
+
+[node name="dialog" type="Label" parent="perpisahan/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("61_kj0bo")
+autowrap_mode = 3
+script = ExtResource("92_c46pf")
+
+[node name="Timer" type="Timer" parent="perpisahan/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/dialog"]
+
+[connection signal="finished" from="world_music" to="." method="_on_world_music_finished"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Player/Area2D" to="Path2D/PathFollow2D/Player" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Path2D/PathFollow2D/Player/Area2D" to="Path2D/PathFollow2D/Player" method="_on_area_2d_area_exited"]
+[connection signal="pressed" from="Path2D/PathFollow2D/Player/Play" to="Path2D/PathFollow2D/Player/Play" method="_on_pressed"]
+[connection signal="animation_finished" from="Path2D/PathFollow2D/Player/Play/car_play_anim" to="Path2D/PathFollow2D/Player/Play" method="_on_car_play_anim_animation_finished"]
+[connection signal="input_event" from="level/Area2D" to="level" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="level2/Area2D" to="level2" method="_on_area_2d_input_event"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/HBoxContainer/Button" to="Book" method="_on_button_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book2" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book2" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book3" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book3" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book4" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book4" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book5" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book5" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book6" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book6" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book7" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book7" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book8" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book8" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book9" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book9" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book10" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book10" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book11" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book11" method="_on_pressed"]
+[connection signal="pressed" from="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book12" to="Book/CenterContainer/VBoxContainer/PanelContainer/MarginContainer/GridContainer/skill_book12" method="_on_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/CenterContainer/VBoxContainer/Button" to="Menu" method="_on_button_pressed"]
+[connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/hp/tambah_hp" to="upgrade" method="_on_tambah_hp_pressed"]
+[connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/attack/tambah_attack" to="upgrade" method="_on_tambah_attack_pressed"]
+[connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/deffense/tambah_defense" to="upgrade" method="_on_tambah_defense_pressed"]
+[connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/inti/Button" to="upgrade" method="_on_button_pressed"]
+[connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Simpan" to="upgrade" method="_on_simpan_pressed"]
+[connection signal="pressed" from="upgrade/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Batal" to="upgrade" method="_on_batal_pressed"]
+[connection signal="pressed" from="MenuWorld/menu/setting" to="MenuWorld" method="_on_setting_pressed"]
+[connection signal="pressed" from="MenuWorld/menu/upgrade" to="MenuWorld" method="_on_upgrade_pressed"]
+[connection signal="pressed" from="MenuWorld/menu/book" to="MenuWorld" method="_on_book_pressed"]
+[connection signal="timeout" from="perpisahan/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/dialog/Timer" to="perpisahan/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/dialog" method="_on_timer_timeout"]

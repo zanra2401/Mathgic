@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvhb6lbvi5yyy"]
+
+[ext_resource type="Script" path="res://Scenes/Deck.gd" id="1_olt2k"]
+
+[node name="Combat" type="Node2D"]
+
+[node name="Deck" type="Node2D" parent="."]
+position = Vector2(0, 670)
+script = ExtResource("1_olt2k")
+padding = null
+gap = null
