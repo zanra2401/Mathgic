@@ -13,7 +13,6 @@
 [ext_resource type="AudioStream" uid="uid://byolhf2yqpn5u" path="res://assets/sound/enemy.wav" id="9_x0esy"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l8s61"]
-load_path = "res://.godot/imported/Gemini_Generated_Image_ep9aw8ep9aw8ep9a.png-52c597ede0c3e5241b337184096c4265.ctex"
 
 [node name="Combat" type="Node2D"]
 script = ExtResource("1_trk2u")

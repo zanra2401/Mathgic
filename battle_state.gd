@@ -30,6 +30,7 @@ var inside_enemy: bool = false
 var inside_attack: bool = false
 var inside_spell: bool = false
 var dragging: bool = false
+var end_turn_button: TextureButton
 
 var cards: Dictionary = {}
 
@@ -126,6 +127,7 @@ func _process(delta):
 func is_enemy_dead():
 	if len(enemies.get_children()) == 0 and battleState != BattleState.WIN:
 		transition.end_combat("win")
+		end_turn_button.can_click = false
 		battleState = BattleState.WIN
 		combat.stop_music()
 		combat.victory_sound()

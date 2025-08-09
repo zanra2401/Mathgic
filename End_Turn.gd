@@ -3,9 +3,11 @@ extends TextureButton
 var active: bool = false
 var fliping: bool = false
 var turning: bool = true
+var can_click: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	BattleState.end_turn_button = self
 	$AnimationPlayer.play("flip")
 	fliping = true
 	$Timer.wait_time = 0.47
@@ -28,7 +30,7 @@ func _process(delta):
 
 
 func _on_pressed():
-	if active:
+	if active and can_click:
 		for effect in BattleState.hp.effect_available:
 			if BattleState.hp.effect_available[effect].roundLeft > 0:
 				BattleState.hp.effect_available[effect].roundLeft -= 1
